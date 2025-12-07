@@ -8,388 +8,305 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import logtrack.ExceptionLogTrack;
-import model.Convenio;
-import model.Exame;
-import model.TipoUsuario;
+
+import model.Cliente;
+import model.Equipamento;
+import model.OrdemServico;
+import model.Tecnico;
 import model.Usuario;
+import model.TipoUsuario;
 
 public class FrontController extends HttpServlet {  
 
-    
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
-        
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+
         String task = request.getParameter("task");
-        if( task == null ) {
-            task = "";
-        }
-        
+        if (task == null) task = "";
+
         try {
-        
             switch (task) {
 
-                case "tipousuario": doGetTipoUsuario(request, response); break;
-
-                case "usuarios": doGetUsuarios(request, response); break;
-                
-                case "convenios": doGetConvenios(request, response); break;
-                
-                case "exames": doGetExames(request, response); break;
-                
-                case "logout": doGetLogout(request, response); break;
+                case "clientes":       doGetClientes(request, response); break;
+                case "equipamentos":   doGetEquipamentos(request, response); break;
+                case "tecnicos":       doGetTecnicos(request, response); break;
+                case "os":             doGetOS(request, response); break;
+                case "logout":         doGetLogout(request, response); break;
 
                 default: doDefault(request, response);
 
             }
-        
-        } catch(Exception ex) {
+
+        } catch (Exception ex) {
             ExceptionLogTrack.getInstance().addLog(ex);
         }
-        
     }
-    
+
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
 
         String task = request.getParameter("task");
-        if( task == null ) {
-            task = "";
-        }
-        
+        if (task == null) task = "";
+
         try {
-        
             switch (task) {
 
-                case "tipousuario": doPostTipoUsuario(request, response); break;
-
-                case "usuarios": doPostUsuarios(request, response); break;
-                
-                case "convenios": doPostConvenios(request, response); break;
-                
-                case "exames": doPostExames(request, response); break;
-                
-                case "login": doPostLogin(request, response); break;
+                case "clientes":       doPostClientes(request, response); break;
+                case "equipamentos":   doPostEquipamentos(request, response); break;
+                case "tecnicos":       doPostTecnicos(request, response); break;
+                case "os":             doPostOS(request, response); break;
+                case "login":          doPostLogin(request, response); break;
 
                 default: doDefault(request, response);
 
             }
-        
-        } catch(Exception ex) {
+
+        } catch (Exception ex) {
             ExceptionLogTrack.getInstance().addLog(ex);
         }
-        
     }
-    
-    
-    
-    private void doGetTipoUsuario(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        
+
+
+
+    private void doGetClientes(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
         String action = request.getParameter("action");
-        if( ( action != null ) &&
-                action.equals("delete") ) {
-            
-            int id = Integer.valueOf( request.getParameter("id") );
-            
-            TipoUsuario tp = new TipoUsuario();
-            tp.setId(id);
-            
-            tp.delete();
+
+        if ("delete".equals(action)) {
+
+            int id = Integer.parseInt(request.getParameter("id"));
+
+            Cliente c = new Cliente();
+            c.setId(id);
+            c.delete();
         }
-        
-        response.sendRedirect( request.getContextPath() + "/home/app/adm/tipousuario.jsp" );
-        
+
+        response.sendRedirect(request.getContextPath() + "/home/app/clientes/");
     }
-    
-    private void doGetUsuarios(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        
+
+
+
+    private void doGetEquipamentos(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
         String action = request.getParameter("action");
-        if( ( action != null ) &&
-                action.equals("delete") ) {
-            
-            int id = Integer.valueOf( request.getParameter("id") );
-            
-            Usuario us = new Usuario();
-            us.setId(id);
-            
-            us.delete();
-            
+
+        if ("delete".equals(action)) {
+
+            int id = Integer.parseInt(request.getParameter("id"));
+
+            Equipamento e = new Equipamento();
+            e.setId(id);
+            e.delete();
         }
-        
-        response.sendRedirect( request.getContextPath() + "/home/app/adm/usuarios.jsp");
-        
+
+        response.sendRedirect(request.getContextPath() + "/home/app/equipamentos/");
     }
-    
-    private void doGetConvenios(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        
+
+
+    private void doGetTecnicos(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
         String action = request.getParameter("action");
-        if( ( action != null ) &&
-                action.equals("delete") ) {
-            
-            int id = Integer.valueOf( request.getParameter("id") );
-            
-            Convenio cv = new Convenio();
-            cv.setId(id);
-            
-            cv.delete();
-            
+
+        if ("delete".equals(action)) {
+
+            int id = Integer.parseInt(request.getParameter("id"));
+
+            Tecnico t = new Tecnico();
+            t.setId(id);
+            t.delete();
         }
-        
-        response.sendRedirect( request.getContextPath() + "/home/app/adm/convenios.jsp");
-        
+
+        response.sendRedirect(request.getContextPath() + "/home/app/tecnicos/");
     }
-    
-    private void doGetExames(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        
+
+
+    private void doGetOS(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
         String action = request.getParameter("action");
-        if( ( action != null ) &&
-                action.equals("delete") ) {
-            
-            int id = Integer.valueOf( request.getParameter("id") );
-            
-            Exame ex = new Exame();
-            ex.setId(id);
-            
-            ex.delete();
-            
+
+        if ("delete".equals(action)) {
+
+            int id = Integer.parseInt(request.getParameter("id"));
+
+            OrdemServico os = new OrdemServico();
+            os.setId(id);
+            os.delete();
         }
-        
-        response.sendRedirect( request.getContextPath() + "/home/app/atm/exames.jsp");
-        
+
+        response.sendRedirect(request.getContextPath() + "/home/app/os/");
     }
-    
+
+
     private void doGetLogout(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        
-       HttpSession sessao = request.getSession(false);
-       if( sessao != null ) {
-           sessao.removeAttribute("usuario");
-           sessao.removeAttribute("tipo_usuario");
-           
-           sessao.invalidate();
-       }
-       
-       response.sendRedirect( request.getContextPath() +  "/home/login.jsp" );
-        
+
+        HttpSession sessao = request.getSession(false);
+
+        if (sessao != null) {
+            sessao.invalidate();
+        }
+
+        response.sendRedirect(request.getContextPath() + "/home/login.jsp");
     }
-    
-    
-    
-    private void doPostTipoUsuario(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        
+
+
+
+    private void doPostClientes(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
         String action = request.getParameter("action");
 
-        int id = Integer.valueOf( request.getParameter("id") );
-        
+        int id = Integer.parseInt(request.getParameter("id"));
         String nome = request.getParameter("nome");
-        
-        String moduloAdministrativo = request.getParameter("modulo_administrativo");
-        if( moduloAdministrativo == null ) {
-            moduloAdministrativo = "N";
-        }
-        
-        String moduloAgendamento = request.getParameter("modulo_agendamento");
-        if( moduloAgendamento == null ) {
-            moduloAgendamento = "N";
-        }
-        
-        String moduloAtendimento = request.getParameter("modulo_atendimento");
-        if( moduloAtendimento == null ) {
-            moduloAtendimento = "N";
-        }
-        
-        // Java Bean
-        TipoUsuario tp = new TipoUsuario();
-
-        tp.setId(id);
-
-        if( action.equals("update") ) tp.load();
-
-        tp.setNome(nome);
-        tp.setModuloAdministrativo(moduloAdministrativo);
-        tp.setModuloAgendamento(moduloAgendamento);
-        tp.setModuloAtendimento(moduloAtendimento);
-
-        tp.save();
-        
-        response.sendRedirect( request.getContextPath() + "/home/app/adm/tipousuario.jsp");
-        
-    }
-    
-    private void doPostUsuarios(HttpServletRequest request, HttpServletResponse response) throws Exception {  
-        
-        String action = request.getParameter("action");
-
-        int id = Integer.valueOf( request.getParameter("id") );
-        
-        String nome = request.getParameter("nome");
-        
-        String nascimento = request.getParameter("nascimento"); // AAAA-MM-DD
-        
-        String cpf = request.getParameter("cpf");
-        
-        String senha = request.getParameter("senha");
-        
-        String endereco = request.getParameter("endereco");
-        
-        int tipoUsuarioId = Integer.valueOf( request.getParameter("tipo_usuario_id") );
-        
-        String convenioId = request.getParameter("convenio");
-        
-        Usuario us = new Usuario();
-
-        us.setId(id);
-
-        if( action.equals("update") ) us.load();
-
-        us.setNome(nome);
-        
-        if( nascimento.equals("") ) {
-            us.setNascimento(null);
-        } else {
-            us.setNascimento(nascimento);
-        }
-        
-        us.setCpf(cpf);
-        us.setSenha(senha);
-        us.setEndereco(endereco);
-        us.setTipoUsuarioId(tipoUsuarioId);
-        
-        if( convenioId.equals("") ) {
-            us.setConvenioId(0);
-        } else {
-            us.setConvenioId( Integer.parseInt( convenioId ) );
-        }
-
-        us.save();
-        
-        response.sendRedirect( request.getContextPath() + "/home/app/adm/usuarios.jsp");
-        
-    } 
-    
-    private void doPostConvenios(HttpServletRequest request, HttpServletResponse response) throws Exception {  
-        
-        String action = request.getParameter("action");
-
-        int id = Integer.parseInt( request.getParameter("id") );
-        
-        String nome = request.getParameter("nome");
-        
-        String cnpj = request.getParameter("cnpj");
-        
         String telefone = request.getParameter("telefone");
-        
-        float valor = Float.parseFloat( request.getParameter("valor") );
-        
-        Convenio cv  = new Convenio();
+        String email = request.getParameter("email");
 
-        cv.setId(id);
+        Cliente c = new Cliente();
+        c.setId(id);
 
-        if( action.equals("update") ) cv.load();
+        if ("update".equals(action)) c.load();
 
-        cv.setNome(nome);
-        cv.setCnpj(cnpj);
-        cv.setTelefone(telefone);
-        cv.setValor(valor);
-        
-        cv.save();
-        
-        response.sendRedirect( request.getContextPath() + "/home/app/adm/convenios.jsp");
-        
-    } 
-    
-     private void doPostExames(HttpServletRequest request, HttpServletResponse response) throws Exception {  
-        
+        c.setNome(nome);
+        c.setTelefone(telefone);
+        c.setEmail(email);
+
+        c.save();
+
+        response.sendRedirect(request.getContextPath() + "/home/app/clientes/");
+    }
+
+
+    private void doPostEquipamentos(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
         String action = request.getParameter("action");
 
-        int id = Integer.parseInt( request.getParameter("id") );
-        
+        int id = Integer.parseInt(request.getParameter("id"));
+        int clienteId = Integer.parseInt(request.getParameter("cliente_id"));
+        String tipo = request.getParameter("tipo");
+        String marca = request.getParameter("marca");
+        String modelo = request.getParameter("modelo");
+        String defeito = request.getParameter("defeito_relatado");
+
+        Equipamento e = new Equipamento();
+        e.setId(id);
+
+        if ("update".equals(action)) e.load();
+
+        e.setClienteId(clienteId);
+        e.setTipo(tipo);
+        e.setMarca(marca);
+        e.setModelo(modelo);
+        e.setDefeitoRelatado(defeito);
+
+        e.save();
+
+        response.sendRedirect(request.getContextPath() + "/home/app/equipamentos/");
+    }
+
+
+
+    private void doPostTecnicos(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        String action = request.getParameter("action");
+
+        int id = Integer.parseInt(request.getParameter("id"));
         String nome = request.getParameter("nome");
-        
-        String descricao = request.getParameter("descricao");
-        
-        float valor = Float.parseFloat( request.getParameter("valor") );
-        
-        Exame ex  = new Exame();
+        String especialidade = request.getParameter("especialidade");
 
-        ex.setId(id);
+        Tecnico t = new Tecnico();
+        t.setId(id);
 
-        if( action.equals("update") ) ex.load();
+        if ("update".equals(action)) t.load();
 
-        ex.setNome(nome);
-        ex.setDescricao(descricao);
-        ex.setValor(valor);
-        
-        ex.save();
-        
-        response.sendRedirect( request.getContextPath() + "/home/app/atm/exames.jsp");
-        
-    } 
-    
-    private void doPostLogin(HttpServletRequest request, HttpServletResponse response) throws Exception {  
-        
-        int id = Integer.valueOf( request.getParameter("id") );        
+        t.setNome(nome);
+        t.setEspecialidade(especialidade);
+
+        t.save();
+
+        response.sendRedirect(request.getContextPath() + "/home/app/tecnicos/");
+    }
+
+
+
+    private void doPostOS(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        String action = request.getParameter("action");
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        int equipamentoId = Integer.parseInt(request.getParameter("equipamento_id"));
+        int tecnicoId = Integer.parseInt(request.getParameter("tecnico_id"));
+        String dataAbertura = request.getParameter("data_abertura");
+        String status = request.getParameter("status");
+        String observacoes = request.getParameter("observacoes");
+
+        Double valorOrc = request.getParameter("valor_orcamento").isEmpty() ? null :
+                Double.valueOf(request.getParameter("valor_orcamento"));
+
+        Double valorFinal = request.getParameter("valor_final").isEmpty() ? null :
+                Double.valueOf(request.getParameter("valor_final"));
+
+        OrdemServico os = new OrdemServico();
+        os.setId(id);
+
+        if ("update".equals(action)) os.load();
+
+        os.setEquipamentoId(equipamentoId);
+        os.setTecnicoId(tecnicoId);
+        os.setDataAbertura(dataAbertura);
+        os.setStatus(status);
+        os.setValorOrcamento(valorOrc);
+        os.setValorFinal(valorFinal);
+        os.setObservacoes(observacoes);
+
+        os.save();
+
+        response.sendRedirect(request.getContextPath() + "/home/app/os/");
+    }
+
+
+    private void doPostLogin(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        int id = Integer.parseInt(request.getParameter("id"));
         String senha = request.getParameter("senha");
-        
+
         Usuario usuarioTry = new Usuario();
         usuarioTry.setId(id);
         usuarioTry.setSenha(senha);
-        
-        Usuario usuario = new Usuario();
-        usuario.setId(id);        
-        boolean status = usuario.load();
-        
-        if( ( status == true ) &&
-              ( usuario.getSenha().equals( usuarioTry.getSenha() ) ) ) {
-            
-            // true crie um sessão se não houver alguma, false do contrário
-            // informações amarmazenadas no servidor
-            HttpSession sessao = request.getSession(false);
-            if( sessao != null ) {
-                sessao.removeAttribute("usuario");
-                sessao.removeAttribute("tipo_usuario");
-           
-                sessao.invalidate();
-            }
-            
-            sessao = request.getSession(true);
-            
-            sessao.setAttribute( "usuario", "(" + usuario.getNome() + ", " + usuario.getId() + ")" );
-            
-            TipoUsuario tipoUsuario = new TipoUsuario();
-            tipoUsuario.setId( usuario.getTipoUsuarioId() );
-            tipoUsuario.load();
-            
-            sessao.setAttribute( "tipo_usuario", tipoUsuario );
-            
-            sessao.setMaxInactiveInterval( 60 * 60 ); // em segundos
-            
-            // criado e armazenado no cliente
-            Cookie cookie = new Cookie( "id", String.valueOf(id) );
-            cookie.setMaxAge( 60 * 10 ); // em segundos
-            response.addCookie(cookie);
-            
-            // faz com que o cliente acesse o recurso
-            response.sendRedirect( request.getContextPath() +  "/home/app/menu.jsp" );
-            
-        } else {
-            
-            // faz com que o servidor acesso o recurso
-            request.setAttribute("msg", "id e/ou senha incorreto(s)");
-            request.getRequestDispatcher( "/home/login.jsp" ).forward(request, response);
-            
-        }
-        
-        
-    } 
-        
-    
-        
-    private void doDefault(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        
-        response.sendRedirect( request.getContextPath() + "/home/login.jsp" );
-        
-    }
-    
 
-    
+        Usuario usuario = new Usuario();
+        usuario.setId(id);
+
+        boolean existe = usuario.load();
+
+        if (existe && usuario.getSenha().equals(usuarioTry.getSenha())) {
+
+            HttpSession sessao = request.getSession(true);
+            sessao.setAttribute("usuario", usuario);
+
+            TipoUsuario tipo = new TipoUsuario();
+            tipo.setId(usuario.getTipoUsuarioId());
+            tipo.load();
+
+            sessao.setAttribute("tipo_usuario", tipo);
+            sessao.setMaxInactiveInterval(60 * 60);
+
+            Cookie cookie = new Cookie("id", String.valueOf(id));
+            cookie.setMaxAge(600);
+            response.addCookie(cookie);
+
+            response.sendRedirect(request.getContextPath() + "/home/app/menu.jsp");
+
+        } else {
+            request.setAttribute("msg", "ID ou senha incorretos!");
+            request.getRequestDispatcher("/home/login.jsp").forward(request, response);
+        }
+    }
+
+
+
+    private void doDefault(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        response.sendRedirect(request.getContextPath() + "/home/login.jsp");
+    }
+
 }
