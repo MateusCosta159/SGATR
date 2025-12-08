@@ -1,0 +1,576 @@
+08-Dec-2025 08:20:39.626 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.44
+08-Dec-2025 08:20:39.640 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 4 2025 13:14:17 UTC
+08-Dec-2025 08:20:39.640 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.44.0
+08-Dec-2025 08:20:39.641 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Dec-2025 08:20:39.641 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.8.0-60-generic
+08-Dec-2025 08:20:39.641 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Dec-2025 08:20:39.641 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk-amd64
+08-Dec-2025 08:20:39.641 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.7+6-Ubuntu-0ubuntu124.04
+08-Dec-2025 08:20:39.641 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+08-Dec-2025 08:20:39.641 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:20:39.641 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:20:39.656 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/logging.properties
+08-Dec-2025 08:20:39.656 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Dec-2025 08:20:39.656 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|dell-OptiPlex-3080
+08-Dec-2025 08:20:39.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Dec-2025 08:20:39.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Dec-2025 08:20:39.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+08-Dec-2025 08:20:39.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Dec-2025 08:20:39.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Dec-2025 08:20:39.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Dec-2025 08:20:39.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Dec-2025 08:20:39.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Dec-2025 08:20:39.657 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Dec-2025 08:20:39.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Dec-2025 08:20:39.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:20:39.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:20:39.658 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/temp
+08-Dec-2025 08:20:39.663 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/opt/oracle/product/23ai/dbhomeFree/lib::/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+08-Dec-2025 08:20:40.189 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:20:40.214 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [837] milliseconds
+08-Dec-2025 08:20:40.268 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Dec-2025 08:20:40.268 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.44]
+08-Dec-2025 08:20:40.277 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGCMS2A2025.xml]
+08-Dec-2025 08:20:40.295 ADVERTÊNCIA [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGCMS2A2025] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGCMS2A2025.xml] has been ignored
+08-Dec-2025 08:20:40.330 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGCMS2A2025.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:602)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:632)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1881)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:527)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:418)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@7354b8c5]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:406)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:179)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4159)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4281)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+		... 35 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [/home/aluno/Área de trabalho/SGCMS2A2025/build/web] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:758)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:715)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+		... 39 more
+08-Dec-2025 08:20:40.334 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGCMS2A2025.xml] has finished in [54] ms
+08-Dec-2025 08:20:40.335 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager]
+08-Dec-2025 08:20:40.746 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:20:40.786 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager] has finished in [451] ms
+08-Dec-2025 08:20:40.787 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager]
+08-Dec-2025 08:20:40.945 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:20:40.948 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager] has finished in [160] ms
+08-Dec-2025 08:20:40.948 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT]
+08-Dec-2025 08:20:41.102 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:20:41.103 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT] has finished in [155] ms
+08-Dec-2025 08:20:41.103 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs]
+08-Dec-2025 08:20:41.234 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:20:41.235 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs] has finished in [132] ms
+08-Dec-2025 08:20:41.235 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples]
+08-Dec-2025 08:20:41.506 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:20:41.545 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples] has finished in [310] ms
+08-Dec-2025 08:20:41.549 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:20:41.560 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [1344] milliseconds
+08-Dec-2025 08:20:46.835 INFORMAÇÕES [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 08:20:46.836 ADVERTÊNCIA [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 08:20:46.979 INFORMAÇÕES [http-nio-8080-exec-8] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:20:46.997 INFORMAÇÕES [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [162] ms
+08-Dec-2025 08:20:47.003 INFORMAÇÕES [http-nio-8080-exec-9] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SGATR]] after start() had already been called. The second call will be ignored.
+08-Dec-2025 08:24:42.114 INFORMAÇÕES [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SGCMS2A2025]
+08-Dec-2025 08:24:58.036 INFORMAÇÕES [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SGATR]
+08-Dec-2025 08:25:01.936 INFORMAÇÕES [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+08-Dec-2025 08:25:01.936 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:25:01.937 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+08-Dec-2025 08:25:01.948 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:25:01.960 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:25:13.109 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.44
+08-Dec-2025 08:25:13.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 4 2025 13:14:17 UTC
+08-Dec-2025 08:25:13.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.44.0
+08-Dec-2025 08:25:13.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Dec-2025 08:25:13.114 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.8.0-60-generic
+08-Dec-2025 08:25:13.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Dec-2025 08:25:13.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk-amd64
+08-Dec-2025 08:25:13.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.7+6-Ubuntu-0ubuntu124.04
+08-Dec-2025 08:25:13.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+08-Dec-2025 08:25:13.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:25:13.115 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:25:13.125 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/logging.properties
+08-Dec-2025 08:25:13.125 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Dec-2025 08:25:13.126 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|dell-OptiPlex-3080
+08-Dec-2025 08:25:13.126 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Dec-2025 08:25:13.126 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Dec-2025 08:25:13.126 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+08-Dec-2025 08:25:13.126 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Dec-2025 08:25:13.126 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Dec-2025 08:25:13.126 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Dec-2025 08:25:13.126 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Dec-2025 08:25:13.127 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Dec-2025 08:25:13.127 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Dec-2025 08:25:13.127 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Dec-2025 08:25:13.127 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:25:13.127 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:25:13.127 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/temp
+08-Dec-2025 08:25:13.129 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/opt/oracle/product/23ai/dbhomeFree/lib::/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+08-Dec-2025 08:25:13.454 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:25:13.476 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [572] milliseconds
+08-Dec-2025 08:25:13.514 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Dec-2025 08:25:13.514 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.44]
+08-Dec-2025 08:25:13.521 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager]
+08-Dec-2025 08:25:13.929 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:25:13.970 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager] has finished in [447] ms
+08-Dec-2025 08:25:13.970 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager]
+08-Dec-2025 08:25:14.127 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:25:14.129 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager] has finished in [159] ms
+08-Dec-2025 08:25:14.129 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT]
+08-Dec-2025 08:25:14.279 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:25:14.281 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT] has finished in [151] ms
+08-Dec-2025 08:25:14.281 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs]
+08-Dec-2025 08:25:14.405 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:25:14.406 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs] has finished in [125] ms
+08-Dec-2025 08:25:14.406 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples]
+08-Dec-2025 08:25:14.616 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:25:14.643 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples] has finished in [237] ms
+08-Dec-2025 08:25:14.647 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:25:14.656 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [1178] milliseconds
+08-Dec-2025 08:25:14.744 INFORMAÇÕES [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 08:25:14.745 ADVERTÊNCIA [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 08:25:14.904 INFORMAÇÕES [http-nio-8080-exec-6] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:25:14.918 INFORMAÇÕES [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [174] ms
+08-Dec-2025 08:25:14.923 INFORMAÇÕES [http-nio-8080-exec-5] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SGATR]] after start() had already been called. The second call will be ignored.
+08-Dec-2025 08:33:16.227 INFORMAÇÕES [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SGATR]
+08-Dec-2025 08:33:16.243 INFORMAÇÕES [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 08:33:16.247 ADVERTÊNCIA [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.setPath A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/SGATR/] does not meet these criteria and has been changed to [/SGATR]
+08-Dec-2025 08:33:16.248 ADVERTÊNCIA [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 08:33:16.380 INFORMAÇÕES [http-nio-8080-exec-9] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:33:16.385 INFORMAÇÕES [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [142] ms
+08-Dec-2025 08:33:38.815 INFORMAÇÕES [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SGATR]
+08-Dec-2025 08:33:38.832 INFORMAÇÕES [http-nio-8080-exec-11] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 08:33:38.834 ADVERTÊNCIA [http-nio-8080-exec-11] org.apache.catalina.core.StandardContext.setPath A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/SGATR/] does not meet these criteria and has been changed to [/SGATR]
+08-Dec-2025 08:33:38.835 ADVERTÊNCIA [http-nio-8080-exec-11] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 08:33:38.951 INFORMAÇÕES [http-nio-8080-exec-11] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:33:38.957 INFORMAÇÕES [http-nio-8080-exec-11] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [124] ms
+08-Dec-2025 08:33:38.960 INFORMAÇÕES [http-nio-8080-exec-7] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SGATR]] after start() had already been called. The second call will be ignored.
+08-Dec-2025 08:33:54.784 INFORMAÇÕES [Catalina-utility-1] org.apache.catalina.startup.HostConfig.reload Reloading context [/SGATR]
+08-Dec-2025 08:33:54.784 INFORMAÇÕES [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 08:33:54.969 INFORMAÇÕES [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:33:54.973 INFORMAÇÕES [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 08:34:14.117 INFORMAÇÕES [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+08-Dec-2025 08:34:14.117 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:34:14.118 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+08-Dec-2025 08:34:14.133 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:34:14.141 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:34:48.477 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.44
+08-Dec-2025 08:34:48.481 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 4 2025 13:14:17 UTC
+08-Dec-2025 08:34:48.481 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.44.0
+08-Dec-2025 08:34:48.481 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Dec-2025 08:34:48.481 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.8.0-60-generic
+08-Dec-2025 08:34:48.481 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Dec-2025 08:34:48.481 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk-amd64
+08-Dec-2025 08:34:48.481 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.7+6-Ubuntu-0ubuntu124.04
+08-Dec-2025 08:34:48.482 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+08-Dec-2025 08:34:48.482 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:34:48.482 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:34:48.490 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/logging.properties
+08-Dec-2025 08:34:48.490 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Dec-2025 08:34:48.490 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|dell-OptiPlex-3080
+08-Dec-2025 08:34:48.490 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Dec-2025 08:34:48.490 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Dec-2025 08:34:48.490 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+08-Dec-2025 08:34:48.490 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Dec-2025 08:34:48.491 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Dec-2025 08:34:48.491 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Dec-2025 08:34:48.491 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Dec-2025 08:34:48.491 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Dec-2025 08:34:48.491 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Dec-2025 08:34:48.491 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Dec-2025 08:34:48.491 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:34:48.491 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:34:48.491 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/temp
+08-Dec-2025 08:34:48.492 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/opt/oracle/product/23ai/dbhomeFree/lib::/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+08-Dec-2025 08:34:48.765 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:34:48.785 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [484] milliseconds
+08-Dec-2025 08:34:48.826 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Dec-2025 08:34:48.826 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.44]
+08-Dec-2025 08:34:48.834 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 08:34:48.844 ADVERTÊNCIA [main] org.apache.catalina.core.StandardContext.setPath A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/SGATR/] does not meet these criteria and has been changed to [/SGATR]
+08-Dec-2025 08:34:48.845 ADVERTÊNCIA [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 08:34:49.307 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:34:49.353 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [517] ms
+08-Dec-2025 08:34:49.354 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager]
+08-Dec-2025 08:34:49.503 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:34:49.509 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager] has finished in [155] ms
+08-Dec-2025 08:34:49.509 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager]
+08-Dec-2025 08:34:49.644 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:34:49.646 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager] has finished in [136] ms
+08-Dec-2025 08:34:49.646 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT]
+08-Dec-2025 08:34:49.767 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:34:49.769 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT] has finished in [123] ms
+08-Dec-2025 08:34:49.769 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs]
+08-Dec-2025 08:34:49.884 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:34:49.886 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs] has finished in [116] ms
+08-Dec-2025 08:34:49.886 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples]
+08-Dec-2025 08:34:50.087 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:34:50.112 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples] has finished in [226] ms
+08-Dec-2025 08:34:50.116 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:34:50.124 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [1338] milliseconds
+08-Dec-2025 08:34:50.711 INFORMAÇÕES [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SGATR]
+08-Dec-2025 08:34:50.734 INFORMAÇÕES [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 08:34:50.737 ADVERTÊNCIA [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 08:34:50.882 INFORMAÇÕES [http-nio-8080-exec-8] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:34:50.889 INFORMAÇÕES [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [155] ms
+08-Dec-2025 08:34:50.893 INFORMAÇÕES [http-nio-8080-exec-9] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SGATR]] after start() had already been called. The second call will be ignored.
+08-Dec-2025 08:35:18.981 INFORMAÇÕES [http-nio-8080-exec-14] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:35:20.126 INFORMAÇÕES [Catalina-utility-1] org.apache.catalina.startup.HostConfig.reload Reloading context [/SGATR]
+08-Dec-2025 08:35:20.127 INFORMAÇÕES [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 08:35:20.266 INFORMAÇÕES [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:35:20.270 INFORMAÇÕES [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 08:41:23.601 INFORMAÇÕES [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+08-Dec-2025 08:41:23.601 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:41:23.602 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+08-Dec-2025 08:41:23.616 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:41:23.625 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:41:36.791 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.44
+08-Dec-2025 08:41:36.795 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 4 2025 13:14:17 UTC
+08-Dec-2025 08:41:36.795 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.44.0
+08-Dec-2025 08:41:36.795 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Dec-2025 08:41:36.795 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.8.0-60-generic
+08-Dec-2025 08:41:36.795 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Dec-2025 08:41:36.795 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk-amd64
+08-Dec-2025 08:41:36.796 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.7+6-Ubuntu-0ubuntu124.04
+08-Dec-2025 08:41:36.796 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+08-Dec-2025 08:41:36.796 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:41:36.796 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:41:36.804 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/logging.properties
+08-Dec-2025 08:41:36.804 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Dec-2025 08:41:36.804 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|dell-OptiPlex-3080
+08-Dec-2025 08:41:36.804 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Dec-2025 08:41:36.804 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Dec-2025 08:41:36.804 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+08-Dec-2025 08:41:36.804 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Dec-2025 08:41:36.804 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Dec-2025 08:41:36.804 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Dec-2025 08:41:36.805 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Dec-2025 08:41:36.805 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Dec-2025 08:41:36.805 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Dec-2025 08:41:36.805 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Dec-2025 08:41:36.805 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:41:36.805 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 08:41:36.805 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/temp
+08-Dec-2025 08:41:36.807 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/opt/oracle/product/23ai/dbhomeFree/lib::/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+08-Dec-2025 08:41:37.065 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:41:37.081 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [437] milliseconds
+08-Dec-2025 08:41:37.116 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Dec-2025 08:41:37.116 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.44]
+08-Dec-2025 08:41:37.123 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 08:41:37.134 ADVERTÊNCIA [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 08:41:37.603 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:41:37.651 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [525] ms
+08-Dec-2025 08:41:37.651 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager]
+08-Dec-2025 08:41:37.834 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:41:37.842 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager] has finished in [191] ms
+08-Dec-2025 08:41:37.842 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager]
+08-Dec-2025 08:41:37.991 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:41:37.992 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager] has finished in [150] ms
+08-Dec-2025 08:41:37.993 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT]
+08-Dec-2025 08:41:38.127 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:41:38.129 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT] has finished in [136] ms
+08-Dec-2025 08:41:38.129 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs]
+08-Dec-2025 08:41:38.237 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:41:38.239 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs] has finished in [109] ms
+08-Dec-2025 08:41:38.239 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples]
+08-Dec-2025 08:41:38.420 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:41:38.444 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples] has finished in [205] ms
+08-Dec-2025 08:41:38.447 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 08:41:38.454 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [1371] milliseconds
+08-Dec-2025 08:41:39.038 INFORMAÇÕES [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SGATR]
+08-Dec-2025 08:41:39.044 INFORMAÇÕES [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 08:41:39.045 ADVERTÊNCIA [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 08:41:39.159 INFORMAÇÕES [http-nio-8080-exec-7] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:41:39.165 INFORMAÇÕES [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [121] ms
+08-Dec-2025 08:50:21.589 INFORMAÇÕES [http-nio-8080-exec-14] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 08:50:21.752 INFORMAÇÕES [http-nio-8080-exec-14] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:50:21.758 INFORMAÇÕES [http-nio-8080-exec-14] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 08:50:34.402 INFORMAÇÕES [http-nio-8080-exec-18] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 08:50:34.541 INFORMAÇÕES [http-nio-8080-exec-18] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:50:34.546 INFORMAÇÕES [http-nio-8080-exec-18] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 08:50:34.550 INFORMAÇÕES [http-nio-8080-exec-17] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 08:50:34.663 INFORMAÇÕES [http-nio-8080-exec-17] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 08:50:34.669 INFORMAÇÕES [http-nio-8080-exec-17] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:02:02.154 INFORMAÇÕES [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:02:02.307 INFORMAÇÕES [http-nio-8080-exec-26] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:02:02.314 INFORMAÇÕES [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:04:55.166 INFORMAÇÕES [http-nio-8080-exec-34] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:04:55.275 INFORMAÇÕES [http-nio-8080-exec-34] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:04:55.278 INFORMAÇÕES [http-nio-8080-exec-34] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:04:57.511 INFORMAÇÕES [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:04:57.664 INFORMAÇÕES [http-nio-8080-exec-33] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:04:57.669 INFORMAÇÕES [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:07:03.903 INFORMAÇÕES [http-nio-8080-exec-36] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SGATR]
+08-Dec-2025 09:07:10.125 INFORMAÇÕES [http-nio-8080-exec-42] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 09:07:10.126 ADVERTÊNCIA [http-nio-8080-exec-42] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 09:07:10.232 INFORMAÇÕES [http-nio-8080-exec-42] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:07:10.235 INFORMAÇÕES [http-nio-8080-exec-42] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [110] ms
+08-Dec-2025 09:07:10.238 INFORMAÇÕES [http-nio-8080-exec-33] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SGATR]] after start() had already been called. The second call will be ignored.
+08-Dec-2025 09:17:18.344 INFORMAÇÕES [http-nio-8080-exec-48] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:17:18.872 INFORMAÇÕES [Catalina-utility-2] org.apache.catalina.startup.HostConfig.reload Reloading context [/SGATR]
+08-Dec-2025 09:17:18.872 INFORMAÇÕES [Catalina-utility-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:17:18.989 INFORMAÇÕES [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:17:18.993 INFORMAÇÕES [Catalina-utility-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:19:52.321 INFORMAÇÕES [http-nio-8080-exec-57] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SGATR]
+08-Dec-2025 09:19:54.311 INFORMAÇÕES [http-nio-8080-exec-55] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 09:19:54.312 ADVERTÊNCIA [http-nio-8080-exec-55] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 09:19:54.414 INFORMAÇÕES [http-nio-8080-exec-55] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:19:54.417 INFORMAÇÕES [http-nio-8080-exec-55] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [106] ms
+08-Dec-2025 09:19:54.419 INFORMAÇÕES [http-nio-8080-exec-47] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SGATR]] after start() had already been called. The second call will be ignored.
+08-Dec-2025 09:20:21.203 INFORMAÇÕES [http-nio-8080-exec-49] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:20:29.029 INFORMAÇÕES [Catalina-utility-2] org.apache.catalina.startup.HostConfig.reload Reloading context [/SGATR]
+08-Dec-2025 09:20:29.029 INFORMAÇÕES [Catalina-utility-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:20:29.155 INFORMAÇÕES [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:20:29.158 INFORMAÇÕES [Catalina-utility-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:26:33.389 INFORMAÇÕES [http-nio-8080-exec-63] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:26:33.519 INFORMAÇÕES [http-nio-8080-exec-63] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:26:33.522 INFORMAÇÕES [http-nio-8080-exec-63] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:27:30.792 INFORMAÇÕES [http-nio-8080-exec-64] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:27:30.914 INFORMAÇÕES [http-nio-8080-exec-64] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:27:30.918 INFORMAÇÕES [http-nio-8080-exec-64] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:27:31.025 INFORMAÇÕES [http-nio-8080-exec-65] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:28:16.780 INFORMAÇÕES [http-nio-8080-exec-70] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:28:16.902 INFORMAÇÕES [http-nio-8080-exec-70] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:28:16.906 INFORMAÇÕES [http-nio-8080-exec-70] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:28:16.909 INFORMAÇÕES [http-nio-8080-exec-68] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:28:17.009 INFORMAÇÕES [http-nio-8080-exec-68] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:28:17.013 INFORMAÇÕES [http-nio-8080-exec-68] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:32:26.358 INFORMAÇÕES [http-nio-8080-exec-80] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:32:26.477 INFORMAÇÕES [http-nio-8080-exec-80] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:32:26.480 INFORMAÇÕES [http-nio-8080-exec-80] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:32:26.593 INFORMAÇÕES [http-nio-8080-exec-87] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:32:29.285 INFORMAÇÕES [Catalina-utility-2] org.apache.catalina.startup.HostConfig.reload Reloading context [/SGATR]
+08-Dec-2025 09:32:29.285 INFORMAÇÕES [Catalina-utility-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 09:32:29.387 INFORMAÇÕES [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:32:29.390 INFORMAÇÕES [Catalina-utility-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 09:32:57.035 INFORMAÇÕES [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+08-Dec-2025 09:32:57.035 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 09:32:57.036 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+08-Dec-2025 09:32:57.045 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 09:32:57.049 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 09:33:09.946 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.44
+08-Dec-2025 09:33:09.949 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 4 2025 13:14:17 UTC
+08-Dec-2025 09:33:09.949 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.44.0
+08-Dec-2025 09:33:09.950 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Dec-2025 09:33:09.950 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.8.0-60-generic
+08-Dec-2025 09:33:09.950 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Dec-2025 09:33:09.950 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk-amd64
+08-Dec-2025 09:33:09.950 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.7+6-Ubuntu-0ubuntu124.04
+08-Dec-2025 09:33:09.950 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+08-Dec-2025 09:33:09.950 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 09:33:09.950 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 09:33:09.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/logging.properties
+08-Dec-2025 09:33:09.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Dec-2025 09:33:09.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|dell-OptiPlex-3080
+08-Dec-2025 09:33:09.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Dec-2025 09:33:09.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Dec-2025 09:33:09.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+08-Dec-2025 09:33:09.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Dec-2025 09:33:09.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Dec-2025 09:33:09.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Dec-2025 09:33:09.958 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Dec-2025 09:33:09.959 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Dec-2025 09:33:09.959 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Dec-2025 09:33:09.959 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Dec-2025 09:33:09.959 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 09:33:09.959 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 09:33:09.959 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/temp
+08-Dec-2025 09:33:09.960 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/opt/oracle/product/23ai/dbhomeFree/lib::/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+08-Dec-2025 09:33:10.255 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 09:33:10.272 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [509] milliseconds
+08-Dec-2025 09:33:10.313 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Dec-2025 09:33:10.313 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.44]
+08-Dec-2025 09:33:10.322 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 09:33:10.337 ADVERTÊNCIA [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 09:33:10.787 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:33:10.839 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [514] ms
+08-Dec-2025 09:33:10.840 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager]
+08-Dec-2025 09:33:10.992 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:33:10.998 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager] has finished in [159] ms
+08-Dec-2025 09:33:10.998 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager]
+08-Dec-2025 09:33:11.146 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:33:11.148 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager] has finished in [150] ms
+08-Dec-2025 09:33:11.148 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT]
+08-Dec-2025 09:33:11.262 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:33:11.264 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT] has finished in [116] ms
+08-Dec-2025 09:33:11.264 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs]
+08-Dec-2025 09:33:11.375 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:33:11.377 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs] has finished in [113] ms
+08-Dec-2025 09:33:11.377 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples]
+08-Dec-2025 09:33:11.600 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:33:11.628 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples] has finished in [251] ms
+08-Dec-2025 09:33:11.632 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 09:33:11.646 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [1372] milliseconds
+08-Dec-2025 09:33:12.239 INFORMAÇÕES [http-nio-8080-exec-5] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SGATR]
+08-Dec-2025 09:33:12.244 INFORMAÇÕES [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 09:33:12.245 ADVERTÊNCIA [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 09:33:12.353 INFORMAÇÕES [http-nio-8080-exec-9] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 09:33:12.357 INFORMAÇÕES [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [113] ms
+08-Dec-2025 11:00:20.463 INFORMAÇÕES [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 11:00:20.582 INFORMAÇÕES [http-nio-8080-exec-20] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:00:20.587 INFORMAÇÕES [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 11:00:21.872 INFORMAÇÕES [http-nio-8080-exec-14] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 11:00:21.979 INFORMAÇÕES [http-nio-8080-exec-14] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:00:21.983 INFORMAÇÕES [http-nio-8080-exec-14] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 11:06:50.345 INFORMAÇÕES [http-nio-8080-exec-27] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 11:06:50.458 INFORMAÇÕES [http-nio-8080-exec-27] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:06:50.463 INFORMAÇÕES [http-nio-8080-exec-27] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 11:06:50.466 INFORMAÇÕES [http-nio-8080-exec-30] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
+08-Dec-2025 11:06:50.646 INFORMAÇÕES [http-nio-8080-exec-30] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:06:50.659 INFORMAÇÕES [http-nio-8080-exec-30] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+08-Dec-2025 11:07:03.080 INFORMAÇÕES [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+08-Dec-2025 11:07:03.080 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 11:07:03.081 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+08-Dec-2025 11:07:03.093 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 11:07:03.104 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 11:07:29.756 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.44
+08-Dec-2025 11:07:29.760 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 4 2025 13:14:17 UTC
+08-Dec-2025 11:07:29.760 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.44.0
+08-Dec-2025 11:07:29.761 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Dec-2025 11:07:29.761 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.8.0-60-generic
+08-Dec-2025 11:07:29.761 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Dec-2025 11:07:29.761 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk-amd64
+08-Dec-2025 11:07:29.761 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.7+6-Ubuntu-0ubuntu124.04
+08-Dec-2025 11:07:29.761 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+08-Dec-2025 11:07:29.761 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 11:07:29.761 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 11:07:29.770 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/logging.properties
+08-Dec-2025 11:07:29.770 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Dec-2025 11:07:29.770 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|dell-OptiPlex-3080
+08-Dec-2025 11:07:29.771 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Dec-2025 11:07:29.771 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Dec-2025 11:07:29.771 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+08-Dec-2025 11:07:29.771 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Dec-2025 11:07:29.771 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Dec-2025 11:07:29.771 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Dec-2025 11:07:29.771 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Dec-2025 11:07:29.771 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Dec-2025 11:07:29.772 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Dec-2025 11:07:29.772 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Dec-2025 11:07:29.772 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 11:07:29.772 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 11:07:29.772 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/temp
+08-Dec-2025 11:07:29.773 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/opt/oracle/product/23ai/dbhomeFree/lib::/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+08-Dec-2025 11:07:30.054 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 11:07:30.071 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [541] milliseconds
+08-Dec-2025 11:07:30.109 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Dec-2025 11:07:30.109 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.44]
+08-Dec-2025 11:07:30.116 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 11:07:30.128 ADVERTÊNCIA [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 11:07:30.604 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:07:30.649 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [530] ms
+08-Dec-2025 11:07:30.650 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager]
+08-Dec-2025 11:07:30.813 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:07:30.819 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager] has finished in [168] ms
+08-Dec-2025 11:07:30.819 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager]
+08-Dec-2025 11:07:30.956 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:07:30.957 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager] has finished in [138] ms
+08-Dec-2025 11:07:30.958 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT]
+08-Dec-2025 11:07:31.101 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:07:31.102 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT] has finished in [144] ms
+08-Dec-2025 11:07:31.103 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs]
+08-Dec-2025 11:07:31.224 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:07:31.225 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs] has finished in [122] ms
+08-Dec-2025 11:07:31.226 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples]
+08-Dec-2025 11:07:31.425 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:07:31.460 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples] has finished in [234] ms
+08-Dec-2025 11:07:31.464 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 11:07:31.473 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [1401] milliseconds
+08-Dec-2025 11:07:32.077 INFORMAÇÕES [http-nio-8080-exec-5] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SGATR]
+08-Dec-2025 11:07:32.099 INFORMAÇÕES [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 11:07:32.101 ADVERTÊNCIA [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 11:07:32.247 INFORMAÇÕES [http-nio-8080-exec-4] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:07:32.254 INFORMAÇÕES [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [156] ms
+08-Dec-2025 11:08:46.627 INFORMAÇÕES [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+08-Dec-2025 11:08:46.628 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 11:08:46.629 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+08-Dec-2025 11:08:46.649 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 11:08:46.651 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 11:09:02.774 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.44
+08-Dec-2025 11:09:02.783 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 4 2025 13:14:17 UTC
+08-Dec-2025 11:09:02.784 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.44.0
+08-Dec-2025 11:09:02.784 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Dec-2025 11:09:02.784 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.8.0-60-generic
+08-Dec-2025 11:09:02.784 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Dec-2025 11:09:02.785 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk-amd64
+08-Dec-2025 11:09:02.785 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.7+6-Ubuntu-0ubuntu124.04
+08-Dec-2025 11:09:02.785 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+08-Dec-2025 11:09:02.788 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 11:09:02.788 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 11:09:02.799 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/logging.properties
+08-Dec-2025 11:09:02.799 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Dec-2025 11:09:02.800 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|dell-OptiPlex-3080
+08-Dec-2025 11:09:02.800 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Dec-2025 11:09:02.800 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Dec-2025 11:09:02.800 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+08-Dec-2025 11:09:02.800 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Dec-2025 11:09:02.800 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Dec-2025 11:09:02.800 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Dec-2025 11:09:02.800 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Dec-2025 11:09:02.800 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Dec-2025 11:09:02.800 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Dec-2025 11:09:02.801 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Dec-2025 11:09:02.801 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 11:09:02.801 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44
+08-Dec-2025 11:09:02.801 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/temp
+08-Dec-2025 11:09:02.805 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/opt/oracle/product/23ai/dbhomeFree/lib::/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+08-Dec-2025 11:09:03.275 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 11:09:03.308 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [840] milliseconds
+08-Dec-2025 11:09:03.381 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Dec-2025 11:09:03.382 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.44]
+08-Dec-2025 11:09:03.400 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml]
+08-Dec-2025 11:09:03.425 ADVERTÊNCIA [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SGATR] in deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has been ignored
+08-Dec-2025 11:09:03.995 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:09:04.051 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/conf/Catalina/localhost/SGATR.xml] has finished in [649] ms
+08-Dec-2025 11:09:04.052 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager]
+08-Dec-2025 11:09:04.272 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:09:04.278 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/manager] has finished in [226] ms
+08-Dec-2025 11:09:04.278 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager]
+08-Dec-2025 11:09:04.475 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:09:04.477 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/host-manager] has finished in [199] ms
+08-Dec-2025 11:09:04.477 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT]
+08-Dec-2025 11:09:04.663 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:09:04.666 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/ROOT] has finished in [188] ms
+08-Dec-2025 11:09:04.666 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs]
+08-Dec-2025 11:09:04.861 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:09:04.863 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/docs] has finished in [197] ms
+08-Dec-2025 11:09:04.863 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples]
+08-Dec-2025 11:09:05.192 INFORMAÇÕES [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Dec-2025 11:09:05.220 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/aluno/Documentos/SGATR/apache-tomcat-10.1.44/webapps/examples] has finished in [357] ms
+08-Dec-2025 11:09:05.225 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Dec-2025 11:09:05.238 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [1928] milliseconds

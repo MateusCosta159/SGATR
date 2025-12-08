@@ -16,25 +16,88 @@ import model.Tecnico;
 import model.Usuario;
 import model.TipoUsuario;
 
-public class FrontController extends HttpServlet {  
+public class FrontController extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         String task = request.getParameter("task");
-        if (task == null) task = "";
+        if (task == null) {
+            task = "";
+        }
 
         try {
             switch (task) {
 
-                case "clientes":       doGetClientes(request, response); break;
-                case "equipamentos":   doGetEquipamentos(request, response); break;
-                case "tecnicos":       doGetTecnicos(request, response); break;
-                case "os":             doGetOS(request, response); break;
-                case "logout":         doGetLogout(request, response); break;
+                case "clientes":
+                    doGetClientes(request, response);
+                    break;
+                case "equipamentos":
+                    doGetEquipamentos(request, response);
+                    break;
+                case "tecnicos":
+                    doGetTecnicos(request, response);
+                    break;
+                case "os":
+                    doGetOS(request, response);
+                    break;
+                case "usuarios":
+                    doGetUsuarios(request, response);
+                    break;
+                case "tipousuario":
+                    doGetTipoUsuario(request, response);
+                    break;
+                case "logout":
+                    doGetLogout(request, response);
+                    break;
 
-                default: doDefault(request, response);
+                default:
+                    doDefault(request, response);
+
+            }
+
+        } catch (Exception ex) {
+            ExceptionLogTrack.getInstance().addLog(ex);
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        String task = request.getParameter("task");
+        if (task == null) {
+            task = "";
+        }
+
+        try {
+            switch (task) {
+
+                case "clientes":
+                    doPostClientes(request, response);
+                    break;
+                case "equipamentos":
+                    doPostEquipamentos(request, response);
+                    break;
+                case "tecnicos":
+                    doPostTecnicos(request, response);
+                    break;
+                case "os":
+                    doPostOS(request, response);
+                    break;
+                case "usuarios":
+                    doPostUsuarios(request, response);
+                    break;
+                case "tipousuario":
+                    doPostTipoUsuario(request, response);
+                    break;
+                case "login":
+                    doPostLogin(request, response);
+                    break;
+
+                default:
+                    doDefault(request, response);
 
             }
 
@@ -44,33 +107,9 @@ public class FrontController extends HttpServlet {
     }
 
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
-            throws ServletException, IOException {
-
-        String task = request.getParameter("task");
-        if (task == null) task = "";
-
-        try {
-            switch (task) {
-
-                case "clientes":       doPostClientes(request, response); break;
-                case "equipamentos":   doPostEquipamentos(request, response); break;
-                case "tecnicos":       doPostTecnicos(request, response); break;
-                case "os":             doPostOS(request, response); break;
-                case "login":          doPostLogin(request, response); break;
-
-                default: doDefault(request, response);
-
-            }
-
-        } catch (Exception ex) {
-            ExceptionLogTrack.getInstance().addLog(ex);
-        }
-    }
-
-
-
+    /* ============================================================
+     *       MÉTODOS GET
+     * ============================================================ */
     private void doGetClientes(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         String action = request.getParameter("action");
@@ -86,8 +125,6 @@ public class FrontController extends HttpServlet {
 
         response.sendRedirect(request.getContextPath() + "/home/app/clientes/");
     }
-
-
 
     private void doGetEquipamentos(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -105,7 +142,6 @@ public class FrontController extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/home/app/equipamentos/");
     }
 
-
     private void doGetTecnicos(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         String action = request.getParameter("action");
@@ -121,7 +157,6 @@ public class FrontController extends HttpServlet {
 
         response.sendRedirect(request.getContextPath() + "/home/app/tecnicos/");
     }
-
 
     private void doGetOS(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -139,6 +174,37 @@ public class FrontController extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/home/app/os/");
     }
 
+    private void doGetUsuarios(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        String action = request.getParameter("action");
+
+        if ("delete".equals(action)) {
+
+            int id = Integer.parseInt(request.getParameter("id"));
+
+            Usuario u = new Usuario();
+            u.setId(id);
+            u.delete();
+        }
+
+        response.sendRedirect(request.getContextPath() + "/home/app/adm/usuarios.jsp");
+    }
+
+    private void doGetTipoUsuario(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        String action = request.getParameter("action");
+
+        if ("delete".equals(action)) {
+
+            int id = Integer.parseInt(request.getParameter("id"));
+
+            TipoUsuario tp = new TipoUsuario();
+            tp.setId(id);
+            tp.delete();
+        }
+
+        response.sendRedirect(request.getContextPath() + "/home/app/adm/tipousuario.jsp");
+    }
 
     private void doGetLogout(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -151,8 +217,9 @@ public class FrontController extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/home/login.jsp");
     }
 
-
-
+    /* ============================================================
+     *       MÉTODOS POST
+     * ============================================================ */
     private void doPostClientes(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         String action = request.getParameter("action");
@@ -161,21 +228,26 @@ public class FrontController extends HttpServlet {
         String nome = request.getParameter("nome");
         String telefone = request.getParameter("telefone");
         String email = request.getParameter("email");
+        String cpf = request.getParameter("cpf");
+        String endereco = request.getParameter("endereco");
 
         Cliente c = new Cliente();
         c.setId(id);
 
-        if ("update".equals(action)) c.load();
+        if ("update".equals(action)) {
+            c.load();
+        }
 
         c.setNome(nome);
         c.setTelefone(telefone);
         c.setEmail(email);
+        c.setCpf(cpf);
+        c.setEndereco(endereco);
 
         c.save();
 
-        response.sendRedirect(request.getContextPath() + "/home/app/clientes/");
+        response.sendRedirect(request.getContextPath() + "/home/app/atendimento/clientes.jsp");
     }
-
 
     private void doPostEquipamentos(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -191,7 +263,9 @@ public class FrontController extends HttpServlet {
         Equipamento e = new Equipamento();
         e.setId(id);
 
-        if ("update".equals(action)) e.load();
+        if ("update".equals(action)) {
+            e.load();
+        }
 
         e.setClienteId(clienteId);
         e.setTipo(tipo);
@@ -204,8 +278,6 @@ public class FrontController extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/home/app/equipamentos/");
     }
 
-
-
     private void doPostTecnicos(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         String action = request.getParameter("action");
@@ -217,7 +289,9 @@ public class FrontController extends HttpServlet {
         Tecnico t = new Tecnico();
         t.setId(id);
 
-        if ("update".equals(action)) t.load();
+        if ("update".equals(action)) {
+            t.load();
+        }
 
         t.setNome(nome);
         t.setEspecialidade(especialidade);
@@ -226,8 +300,6 @@ public class FrontController extends HttpServlet {
 
         response.sendRedirect(request.getContextPath() + "/home/app/tecnicos/");
     }
-
-
 
     private void doPostOS(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -240,16 +312,18 @@ public class FrontController extends HttpServlet {
         String status = request.getParameter("status");
         String observacoes = request.getParameter("observacoes");
 
-        Double valorOrc = request.getParameter("valor_orcamento").isEmpty() ? null :
-                Double.valueOf(request.getParameter("valor_orcamento"));
+        Double valorOrc = request.getParameter("valor_orcamento").isEmpty() ? null
+                : Double.valueOf(request.getParameter("valor_orcamento"));
 
-        Double valorFinal = request.getParameter("valor_final").isEmpty() ? null :
-                Double.valueOf(request.getParameter("valor_final"));
+        Double valorFinal = request.getParameter("valor_final").isEmpty() ? null
+                : Double.valueOf(request.getParameter("valor_final"));
 
         OrdemServico os = new OrdemServico();
         os.setId(id);
 
-        if ("update".equals(action)) os.load();
+        if ("update".equals(action)) {
+            os.load();
+        }
 
         os.setEquipamentoId(equipamentoId);
         os.setTecnicoId(tecnicoId);
@@ -264,6 +338,70 @@ public class FrontController extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/home/app/os/");
     }
 
+    private void doPostUsuarios(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        String action = request.getParameter("action");
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        String nome = request.getParameter("nome");
+        String senha = request.getParameter("senha");
+        int tipoUsuarioId = Integer.parseInt(request.getParameter("tipo_usuario_id"));
+
+        Usuario u = new Usuario();
+        u.setId(id);
+
+        if ("update".equals(action)) {
+            u.load();
+        }
+
+        u.setNome(nome);
+        u.setSenha(senha);
+
+        u.setTipoUsuarioId(tipoUsuarioId);
+
+        u.save();
+
+        response.sendRedirect(request.getContextPath() + "/home/app/adm/usuarios.jsp");
+    }
+
+    private void doPostTipoUsuario(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        String action = request.getParameter("action");
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        String nome = request.getParameter("nome");
+
+        String moduloAdm = request.getParameter("modulo_adm");
+        if (moduloAdm == null) {
+            moduloAdm = "N";
+        }
+
+        String moduloTecnico = request.getParameter("modulo_tecnico");
+        if (moduloTecnico == null) {
+            moduloTecnico = "N";
+        }
+
+        String moduloAtendimento = request.getParameter("modulo_atendimento");
+        if (moduloAtendimento == null) {
+            moduloAtendimento = "N";
+        }
+
+        TipoUsuario tp = new TipoUsuario();
+        tp.setId(id);
+
+        if ("update".equals(action)) {
+            tp.load();
+        }
+
+        tp.setNome(nome);
+        tp.setModuloAdmin(moduloAdm);
+        tp.setModuloAtendimento(moduloAtendimento);
+        tp.setModuloTecnico(moduloTecnico);
+
+        tp.save();
+
+        response.sendRedirect(request.getContextPath() + "/home/app/adm/tipousuario.jsp");
+    }
 
     private void doPostLogin(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -302,8 +440,6 @@ public class FrontController extends HttpServlet {
             request.getRequestDispatcher("/home/login.jsp").forward(request, response);
         }
     }
-
-
 
     private void doDefault(HttpServletRequest request, HttpServletResponse response) throws Exception {
         response.sendRedirect(request.getContextPath() + "/home/login.jsp");
