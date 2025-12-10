@@ -4,6 +4,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/app/css/tecnicos.css">
+
         <title>Técnico</title>
     </head>
     <body>
@@ -26,7 +28,7 @@
                 }
             }
 
-            // Verifica se já existe uma entidade nos atributos da requisição
+            
             Tecnico entity = (Tecnico) request.getAttribute("entity");
             if (entity == null) {
                 entity = tec != null ? tec : new Tecnico();
@@ -35,7 +37,7 @@
 
         <h1><%= entity.getId() == 0 ? "Novo Técnico" : "Editar Técnico" %></h1>
 
-        <form action="<%= request.getContextPath()%>/home?action=save&task=tecnicos" method="post">
+        <form action="<%= request.getContextPath()%>/home?action=<%= action%>&task=tecnicos" method="post">
 
             <label for="id">Id:</label>
             <input type="text" id="id" name="id" pattern="\d+" title="apenas dígitos" 

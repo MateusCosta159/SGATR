@@ -6,6 +6,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/app/css/equipamentos.css">
+
         <title>Equipamento</title>
     </head>
     <body>
@@ -45,7 +47,7 @@
 
         <h1><%= entity.getId() == 0 ? "Novo Equipamento" : "Editar Equipamento" %></h1>
 
-        <form action="<%= request.getContextPath()%>/home?action=save&task=equipamentos" method="post">
+        <form action="<%= request.getContextPath()%>/home?action=<%= action%>&task=equipamentos" method="post">
 
             <label for="id">Id:</label>
             <input type="text" id="id" name="id" pattern="\d+" title="apenas dígitos" 

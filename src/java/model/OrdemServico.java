@@ -97,18 +97,54 @@ public class OrdemServico extends DataAccessObject {
         return " id = " + id;
     }
 
-    @Override
+   @Override
     protected DataAccessObject fill(ArrayList<Object> data) {
-        id = (int) data.get(0);
-        equipamentoId = (int) data.get(1);
-        tecnicoId = (int) data.get(2);
-        dataAbertura = (String) data.get(3);
-        status = (String) data.get(4);
-        valorOrcamento = data.get(5) == null ? null : Double.valueOf(data.get(5).toString());
-        valorFinal = data.get(6) == null ? null : Double.valueOf(data.get(6).toString());
-        observacoes = (String) data.get(7);
+        try {
+            id = (int) data.get(0);
+            equipamentoId = (int) data.get(1);
+            tecnicoId = (int) data.get(2);
+            
+            // *** CORREÇÃO CRÍTICA: Converter java.sql.Date para String ***
+            Object dateObj = data.get(3);
+            if (dateObj instanceof java.sql.Date) {
+                dataAbertura = dateObj.toString(); // Converte para "YYYY-MM-DD"
+            } else if (dateObj instanceof String) {
+                dataAbertura = (String) dateObj;
+            } else if (dateObj == null) {
+                dataAbertura = null;
+            }
+            
+            status = (String) data.get(4);
+            
+            // Para valores Double
+            Object valorOrcObj = data.get(5);
+            if (valorOrcObj instanceof Double) {
+                valorOrcamento = (Double) valorOrcObj;
+            } else if (valorOrcObj instanceof Number) {
+                valorOrcamento = ((Number) valorOrcObj).doubleValue();
+            } else if (valorOrcObj == null) {
+                valorOrcamento = null;
+            }
+            
+            Object valorFinalObj = data.get(6);
+            if (valorFinalObj instanceof Double) {
+                valorFinal = (Double) valorFinalObj;
+            } else if (valorFinalObj instanceof Number) {
+                valorFinal = ((Number) valorFinalObj).doubleValue();
+            } else if (valorFinalObj == null) {
+                valorFinal = null;
+            }
+            
+            observacoes = (String) data.get(7);
+            
+        } catch (Exception e) {
+            System.err.println("Erro em OrdemServico.fill(): " + e.getMessage());
+            e.printStackTrace();
+        }
+        
         return this;
     }
+
 
     @Override
     protected OrdemServico copy() {

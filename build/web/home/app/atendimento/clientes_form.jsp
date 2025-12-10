@@ -4,6 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/app/css/clientes.css">
         <title>Cliente</title>
     </head>
     <body>
@@ -19,14 +20,12 @@
             } else {
                 if (action.equals("update")) {
                     int id = Integer.valueOf(request.getParameter("id"));
-
                     cl = new Cliente();
                     cl.setId(id);
                     cl.load();
                 }
             }
 
-            
             Cliente entity = (Cliente) request.getAttribute("entity");
             if (entity == null) {
                 entity = cl != null ? cl : new Cliente();
@@ -35,7 +34,8 @@
 
         <h1><%= entity.getId() == 0 ? "Novo Cliente" : "Editar Cliente" %></h1>
 
-        <form action="<%= request.getContextPath()%>/home?action=save&task=clientes" method="post">
+        <!-- CORREÇÃO AQUI: usar action dinâmica como no Convênio -->
+        <form action="<%= request.getContextPath()%>/home?action=<%= action%>&task=clientes" method="post">
 
             <label for="id">Id:</label>
             <input type="text" id="id" name="id" pattern="\d+" title="apenas dígitos" 

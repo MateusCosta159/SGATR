@@ -75,107 +75,86 @@ public class FrontController extends HttpServlet {
         }
     }
 
-
-
+    // ========== MÉTODOS GET ==========
 
     private void doGetClientes(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
-
         if ("delete".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
             Cliente c = new Cliente();
             c.setId(id);
             c.delete();
         }
-
         response.sendRedirect(request.getContextPath() + "/home/app/atendimento/clientes.jsp");
     }
 
-
-  
     private void doGetEquipamentos(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
-
         if ("delete".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
             Equipamento e = new Equipamento();
             e.setId(id);
             e.delete();
         }
-
         response.sendRedirect(request.getContextPath() + "/home/app/atendimento/equipamentos.jsp");
     }
 
-
-
     private void doGetTecnicos(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
-
         if ("delete".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
             Tecnico t = new Tecnico();
             t.setId(id);
             t.delete();
         }
-
         response.sendRedirect(request.getContextPath() + "/home/app/tecnico/tecnicos.jsp");
     }
 
-
     private void doGetOS(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
-
         if ("delete".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
             OrdemServico os = new OrdemServico();
             os.setId(id);
             os.delete();
         }
-
         response.sendRedirect(request.getContextPath() + "/home/app/os/os.jsp");
     }
 
-
     private void doGetUsuarios(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
-
         if ("delete".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
             Usuario u = new Usuario();
             u.setId(id);
             u.delete();
         }
-
         response.sendRedirect(request.getContextPath() + "/home/app/adm/usuarios.jsp");
     }
 
-
     private void doGetTipoUsuario(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
-
         if ("delete".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
             TipoUsuario tp = new TipoUsuario();
             tp.setId(id);
             tp.delete();
         }
-
         response.sendRedirect(request.getContextPath() + "/home/app/adm/tipousuario.jsp");
     }
 
+    // ========== MÉTODOS POST ==========
 
-   
     private void doPostClientes(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
 
-        int id = Integer.parseInt(request.getParameter("id"));
+        // CORREÇÃO: Tratar ID que pode ser vazio em criação
+        String idStr = request.getParameter("id");
+        int id = 0;
+        if (idStr != null && !idStr.trim().isEmpty()) {
+            id = Integer.parseInt(idStr);
+        }
+
         String nome = request.getParameter("nome");
         String telefone = request.getParameter("telefone");
         String email = request.getParameter("email");
@@ -183,9 +162,16 @@ public class FrontController extends HttpServlet {
         String endereco = request.getParameter("endereco");
 
         Cliente c = new Cliente();
-        c.setId(id);
+        
+        // CORREÇÃO: Só setar ID se for maior que 0
+        if (id > 0) {
+            c.setId(id);
+        }
 
-        if ("update".equals(action)) c.load();
+        // CORREÇÃO: Seguir a mesma lógica do exemplo - verificar se é update
+        if ("update".equals(action) && id > 0) {
+            c.load();
+        }
 
         c.setNome(nome);
         c.setTelefone(telefone);
@@ -198,23 +184,33 @@ public class FrontController extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/home/app/atendimento/clientes.jsp");
     }
 
-
-  
     private void doPostEquipamentos(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
 
-        int id = Integer.parseInt(request.getParameter("id"));
-        int clienteId = Integer.parseInt(request.getParameter("cliente_id"));
+        // CORREÇÃO: Tratar ID que pode ser vazio
+        String idStr = request.getParameter("id");
+        int id = 0;
+        if (idStr != null && !idStr.trim().isEmpty()) {
+            id = Integer.parseInt(idStr);
+        }
+
+        int clienteId = Integer.parseInt(request.getParameter("clienteId"));
         String tipo = request.getParameter("tipo");
         String marca = request.getParameter("marca");
         String modelo = request.getParameter("modelo");
-        String defeito = request.getParameter("defeito_relatado");
+        // CORREÇÃO: Nome do parâmetro estava errado
+        String defeito = request.getParameter("defeitoRelatado");
 
         Equipamento e = new Equipamento();
-        e.setId(id);
+        
+        if (id > 0) {
+            e.setId(id);
+        }
 
-        if ("update".equals(action)) e.load();
+        // CORREÇÃO: Seguir a mesma lógica do exemplo
+        if ("update".equals(action) && id > 0) {
+            e.load();
+        }
 
         e.setClienteId(clienteId);
         e.setTipo(tipo);
@@ -227,79 +223,127 @@ public class FrontController extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/home/app/atendimento/equipamentos.jsp");
     }
 
-
     private void doPostTecnicos(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
 
-        int id = Integer.parseInt(request.getParameter("id"));
+        // CORREÇÃO: Tratar ID que pode ser vazio
+        String idStr = request.getParameter("id");
+        int id = 0;
+        if (idStr != null && !idStr.trim().isEmpty()) {
+            id = Integer.parseInt(idStr);
+        }
+
         String nome = request.getParameter("nome");
         String especialidade = request.getParameter("especialidade");
+        // CORREÇÃO: Adicionar campo telefone que estava faltando
+        String telefone = request.getParameter("telefone");
 
         Tecnico t = new Tecnico();
-        t.setId(id);
+        
+        if (id > 0) {
+            t.setId(id);
+        }
 
-        if ("update".equals(action)) t.load();
+        if ("update".equals(action) && id > 0) {
+            t.load();
+        }
 
         t.setNome(nome);
         t.setEspecialidade(especialidade);
+        t.setTelefone(telefone);
 
         t.save();
 
         response.sendRedirect(request.getContextPath() + "/home/app/tecnico/tecnicos.jsp");
     }
 
-
-    
     private void doPostOS(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    
+    String action = request.getParameter("action");
 
-        String action = request.getParameter("action");
+    int id = Integer.parseInt(request.getParameter("id"));
+    
+    int equipamentoId = Integer.parseInt(request.getParameter("equipamentoId"));
+    
+    // IMPORTANTE: Copiar a mesma lógica do Usuário para tecnicoId
+    String tecnicoIdStr = request.getParameter("tecnicoId");
+    int tecnicoId = 0; // Default 0 como no Usuário (convenioId = 0)
+    if (tecnicoIdStr != null && !tecnicoIdStr.trim().isEmpty()) {
+        tecnicoId = Integer.parseInt(tecnicoIdStr);
+    }
+    
+    // *** COPIA EXATA DA LÓGICA DO USUÁRIO ***
+    String dataAbertura = request.getParameter("dataAbertura");
+    
+    String status = request.getParameter("status");
+    String observacoes = request.getParameter("observacoes");
 
-        int id = Integer.parseInt(request.getParameter("id"));
-        int equipamentoId = Integer.parseInt(request.getParameter("equipamento_id"));
-        int tecnicoId = Integer.parseInt(request.getParameter("tecnico_id"));
-        String dataAbertura = request.getParameter("data_abertura");
-        String status = request.getParameter("status");
-        String observacoes = request.getParameter("observacoes");
-
-        Double valorOrc = request.getParameter("valor_orcamento").isEmpty() ? null :
-                Double.valueOf(request.getParameter("valor_orcamento"));
-
-        Double valorFinal = request.getParameter("valor_final").isEmpty() ? null :
-                Double.valueOf(request.getParameter("valor_final"));
-
-        OrdemServico os = new OrdemServico();
-        os.setId(id);
-
-        if ("update".equals(action)) os.load();
-
-        os.setEquipamentoId(equipamentoId);
-        os.setTecnicoId(tecnicoId);
-        os.setDataAbertura(dataAbertura);
-        os.setStatus(status);
-        os.setValorOrcamento(valorOrc);
-        os.setValorFinal(valorFinal);
-        os.setObservacoes(observacoes);
-
-        os.save();
-
-        response.sendRedirect(request.getContextPath() + "/home/app/os/os.jsp");
+    // Copiar a mesma lógica para valores monetários
+    String valorOrcStr = request.getParameter("valorOrcamento");
+    Double valorOrc = null;
+    if (valorOrcStr != null && !valorOrcStr.trim().isEmpty()) {
+        valorOrc = Double.valueOf(valorOrcStr);
     }
 
+    String valorFinalStr = request.getParameter("valorFinal");
+    Double valorFinal = null;
+    if (valorFinalStr != null && !valorFinalStr.trim().isEmpty()) {
+        valorFinal = Double.valueOf(valorFinalStr);
+    }
 
+    OrdemServico os = new OrdemServico();
+
+    os.setId(id);
+
+    // MESMA VERIFICAÇÃO DO USUÁRIO
+    if ("update".equals(action)) {
+        os.load();
+    }
+
+    os.setEquipamentoId(equipamentoId);
+    os.setTecnicoId(tecnicoId);
+    
+    // *** TRATAMENTO IDÊNTICO AO DO USUÁRIO PARA DATA ***
+    if (dataAbertura == null || dataAbertura.trim().isEmpty()) {
+        os.setDataAbertura(null);
+    } else {
+        os.setDataAbertura(dataAbertura);
+    }
+    
+    os.setStatus(status);
+    os.setObservacoes(observacoes);
+    
+    // Para valores monetários, se null, o setter deve lidar com isso
+    os.setValorOrcamento(valorOrc);
+    os.setValorFinal(valorFinal);
+
+    os.save();
+    
+    response.sendRedirect(request.getContextPath() + "/home/app/os/os.jsp");
+}
     private void doPostUsuarios(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
 
-        int id = Integer.parseInt(request.getParameter("id"));
+        // CORREÇÃO: Tratar ID que pode ser vazio
+        String idStr = request.getParameter("id");
+        int id = 0;
+        if (idStr != null && !idStr.trim().isEmpty()) {
+            id = Integer.parseInt(idStr);
+        }
+
         String nome = request.getParameter("nome");
         String senha = request.getParameter("senha");
         int tipoUsuarioId = Integer.parseInt(request.getParameter("tipo_usuario_id"));
 
         Usuario u = new Usuario();
-        u.setId(id);
+        
+        if (id > 0) {
+            u.setId(id);
+        }
 
-        if ("update".equals(action)) u.load();
+        if ("update".equals(action) && id > 0) {
+            u.load();
+        }
 
         u.setNome(nome);
         u.setSenha(senha);
@@ -311,10 +355,15 @@ public class FrontController extends HttpServlet {
     }
 
     private void doPostTipoUsuario(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         String action = request.getParameter("action");
 
-        int id = Integer.parseInt(request.getParameter("id"));
+        // CORREÇÃO: Tratar ID que pode ser vazio
+        String idStr = request.getParameter("id");
+        int id = 0;
+        if (idStr != null && !idStr.trim().isEmpty()) {
+            id = Integer.parseInt(idStr);
+        }
+
         String nome = request.getParameter("nome");
 
         String moduloAdm = request.getParameter("modulo_adm");
@@ -327,9 +376,14 @@ public class FrontController extends HttpServlet {
         if (moduloAtendimento == null) moduloAtendimento = "N";
 
         TipoUsuario tp = new TipoUsuario();
-        tp.setId(id);
+        
+        if (id > 0) {
+            tp.setId(id);
+        }
 
-        if ("update".equals(action)) tp.load();
+        if ("update".equals(action) && id > 0) {
+            tp.load();
+        }
 
         tp.setNome(nome);
         tp.setModuloAdmin(moduloAdm);
@@ -340,57 +394,47 @@ public class FrontController extends HttpServlet {
 
         response.sendRedirect(request.getContextPath() + "/home/app/adm/tipousuario.jsp");
     }
-    
+
     private void doPostLogin(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String senha = request.getParameter("senha");
 
-    int id = Integer.parseInt(request.getParameter("id"));
-    String senha = request.getParameter("senha");
+        Usuario usuarioTry = new Usuario();
+        usuarioTry.setId(id);
+        usuarioTry.setSenha(senha);
 
-    Usuario usuarioTry = new Usuario();
-    usuarioTry.setId(id);
-    usuarioTry.setSenha(senha);
+        Usuario usuario = new Usuario();
+        usuario.setId(id);
 
-    Usuario usuario = new Usuario();
-    usuario.setId(id);
+        boolean existe = usuario.load();
 
-    boolean existe = usuario.load();
+        if (existe && usuario.getSenha().equals(usuarioTry.getSenha())) {
+            HttpSession sessao = request.getSession(true);
+            sessao.setAttribute("usuario", usuario);
 
-    if (existe && usuario.getSenha().equals(usuarioTry.getSenha())) {
+            TipoUsuario tipo = new TipoUsuario();
+            tipo.setId(usuario.getTipoUsuarioId());
+            tipo.load();
 
-        HttpSession sessao = request.getSession(true);
-        sessao.setAttribute("usuario", usuario);
+            sessao.setAttribute("tipo_usuario", tipo);
+            sessao.setMaxInactiveInterval(60 * 60);
 
-        TipoUsuario tipo = new TipoUsuario();
-        tipo.setId(usuario.getTipoUsuarioId());
-        tipo.load();
+            Cookie cookie = new Cookie("id", String.valueOf(id));
+            cookie.setMaxAge(600);
+            response.addCookie(cookie);
 
-        sessao.setAttribute("tipo_usuario", tipo);
-        sessao.setMaxInactiveInterval(60 * 60);
-
-        Cookie cookie = new Cookie("id", String.valueOf(id));
-        cookie.setMaxAge(600);
-        response.addCookie(cookie);
-
-        response.sendRedirect(request.getContextPath() + "/home/app/menu.jsp");
-
-    } else {
-        request.setAttribute("msg", "ID ou senha incorretos!");
-        request.getRequestDispatcher("/home/login.jsp").forward(request, response);
+            response.sendRedirect(request.getContextPath() + "/home/app/menu.jsp");
+        } else {
+            request.setAttribute("msg", "ID ou senha incorretos!");
+            request.getRequestDispatcher("/home/login.jsp").forward(request, response);
+        }
     }
-}
 
-
-
-  
     private void doGetLogout(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
         HttpSession sessao = request.getSession(false);
         if (sessao != null) sessao.invalidate();
-
         response.sendRedirect(request.getContextPath() + "/home/login.jsp");
     }
-
-
 
     private void doDefault(HttpServletRequest request, HttpServletResponse response) throws Exception {
         response.sendRedirect(request.getContextPath() + "/home/login.jsp");

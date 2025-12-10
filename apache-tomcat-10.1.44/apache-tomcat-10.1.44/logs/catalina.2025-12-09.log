@@ -152,3 +152,8 @@
 09-Dec-2025 22:58:16.215 INFO [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] has started
 09-Dec-2025 22:58:17.320 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
 09-Dec-2025 22:58:17.352 INFO [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SGATR] is completed
+09-Dec-2025 23:39:56.835 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+09-Dec-2025 23:39:56.837 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+09-Dec-2025 23:39:56.851 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-Dec-2025 23:39:56.901 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+09-Dec-2025 23:39:56.924 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
