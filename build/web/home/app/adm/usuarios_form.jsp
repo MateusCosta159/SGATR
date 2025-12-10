@@ -12,8 +12,10 @@
 <%
     int id = 0;
     String nome = "";
-    int tipoUsuarioId = 1; // valor padrão
+    int tipoUsuarioId = 1;
     String senha = "";
+
+    boolean editando = false;
 
     if (request.getParameter("id") != null) {
 
@@ -23,25 +25,33 @@
         u.setId(id);
 
         if (u.load()) {
+            editando = true;
             nome = u.getNome();
             tipoUsuarioId = u.getTipoUsuarioId();
-            // senha não é carregada, permanece vazia
         }
     }
 %>
 
-<h1><%= id == 0 ? "Criar Usuário" : "Editar Usuário" %></h1>
+<h1><%= editando ? "Editar Usuário" : "Criar Usuário" %></h1>
 
 <form action="<%= request.getContextPath() %>/home?task=usuarios" method="post">
 
-    <input type="hidden" name="action" value="<%= id == 0 ? "insert" : "update" %>">
-    <input type="hidden" name="id" value="<%= id %>">
+    <input type="hidden" name="action" value="<%= editando ? "update" : "insert" %>">
+
+ 
+    ID:
+    <% if (!editando) { %>
+        <input type="number" name="id" value="<%= id %>" required><br><br>
+    <% } else { %>
+        <!-- ID aparece travado durante edição -->
+        <input type="number" name="id" value="<%= id %>" readonly><br><br>
+    <% } %>
 
     Nome:
     <input type="text" name="nome" value="<%= nome %>" required><br><br>
 
     Senha:
-    <input type="password" name="senha" value="" required><br><br>
+    <input type="password" name="senha" required><br><br>
 
     Tipo Usuário (ID):
     <input type="number" name="tipo_usuario_id" value="<%= tipoUsuarioId %>" required><br><br>

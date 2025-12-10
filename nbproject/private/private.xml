@@ -3,28 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/aluno/Documentos/SGATR/src/java/controller/ContextListener.java</file>
-            <file>file:/home/aluno/Documentos/SGATR/src/java/controller/FrontController.java</file>
-            <file>file:/home/aluno/Documentos/SGATR/src/java/model/framework/app-config.xml</file>
-            <file>file:/home/aluno/Documentos/SGATR/src/java/controller/AppConfig.java</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/login.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/app/adm/usuarios.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/app/adm/usuarios_form.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/META-INF/context.xml</file>
-            <file>file:/home/aluno/Documentos/SGATR/build/web/WEB-INF/web.xml</file>
-            <file>file:/home/aluno/Documentos/SGATR/src/java/model/Usuario.java</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/app/menu.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/app/modulos.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/src/java/controller/AutenticadorAdm.java</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/app/adm/tipousuario.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/app/adm/tipousuario_form.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/src/java/model/TipoUsuario.java</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/app/atendimento/clientes.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/app/atendimento/clientes_form.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/app/atendimento/equipamentos.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/web/home/app/atendimento/equipamentos_form.jsp</file>
-            <file>file:/home/aluno/Documentos/SGATR/src/java/model/Cliente.java</file>
-            <file>file:/home/aluno/Documentos/SGATR/src/java/model/framework/DataAccessObject.java</file>
+            <file>file:/C:/SGATR/src/java/model/framework/app-config.xml</file>
+            <file>file:/C:/SGATR/src/java/controller/AutenticadorAdm.java</file>
         </group>
     </open-files>
 </project-private>

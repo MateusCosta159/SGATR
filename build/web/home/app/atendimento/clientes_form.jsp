@@ -1,41 +1,70 @@
 <%@page import="model.Cliente"%>
-<%@ include file="/home/app/modulos.jsp" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Cliente</title>
+    </head>
+    <body>
 
-<%
-    Cliente c = null;
-    String action = request.getParameter("action");
+        <%@ include file="/home/app/modulos.jsp" %>
 
-    if ("update".equals(action)) {
-        int id = Integer.parseInt(request.getParameter("id"));
-        c = new Cliente();
-        c.setId(id);
-        c.load();
-    }
-%>
+        <%
+            Cliente cl = null;
 
-<h1>Cliente</h1>
+            String action = request.getParameter("action");
+            if (action == null) {
+                action = "create";
+            } else {
+                if (action.equals("update")) {
+                    int id = Integer.valueOf(request.getParameter("id"));
 
-<form action="<%=request.getContextPath()%>/home?task=clientes&action=<%=action%>" method="post">
+                    cl = new Cliente();
+                    cl.setId(id);
+                    cl.load();
+                }
+            }
 
-    <label>ID:</label>
-    <input type="text" name="id" value="<%=c != null ? c.getId() : ""%>"
-           <%= c != null ? "readonly" : "" %> required><br><br>
+            
+            Cliente entity = (Cliente) request.getAttribute("entity");
+            if (entity == null) {
+                entity = cl != null ? cl : new Cliente();
+            }
+        %>
 
-    <label>Nome:</label>
-    <input type="text" name="nome" value="<%=c != null ? c.getNome() : ""%>" required><br><br>
+        <h1><%= entity.getId() == 0 ? "Novo Cliente" : "Editar Cliente" %></h1>
 
-    <label>Telefone:</label>
-    <input type="text" name="telefone" value="<%=c != null ? c.getTelefone() : ""%>" required><br><br>
+        <form action="<%= request.getContextPath()%>/home?action=save&task=clientes" method="post">
 
-    <label>Email:</label>
-    <input type="email" name="email" value="<%=c != null ? c.getEmail() : ""%>" required><br><br>
+            <label for="id">Id:</label>
+            <input type="text" id="id" name="id" pattern="\d+" title="apenas dígitos" 
+                   value="<%= entity.getId() %>" 
+                   <%= (entity.getId() != 0) ? "readonly" : "" %> required><br/><br/>
 
-    <label>CPF:</label>
-    <input type="text" name="cpf" value="<%=c != null ? c.getCpf() : ""%>" required><br><br>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" 
+                   value="<%= (entity.getNome() != null) ? entity.getNome() : "" %>" required><br/><br/>
 
-    <label>Endere�o:</label>
-    <input type="text" name="endereco" value="<%=c != null ? c.getEndereco() : ""%>" required><br><br>
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" 
+                   value="<%= (entity.getTelefone() != null) ? entity.getTelefone() : "" %>"><br/><br/>
 
-    <input type="submit" value="Salvar">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" 
+                   value="<%= (entity.getEmail() != null) ? entity.getEmail() : "" %>"><br/><br/>
 
-</form>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" 
+                   value="<%= (entity.getCpf() != null) ? entity.getCpf() : "" %>"><br/><br/>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" 
+                   value="<%= (entity.getEndereco() != null) ? entity.getEndereco() : "" %>"><br/><br/>
+
+            <input type="submit" name="Salvar" value="Salvar"> 
+            <a href="<%= request.getContextPath() %>/home?task=clientes&action=list">Cancelar</a>
+        </form>
+
+    </body>
+</html>

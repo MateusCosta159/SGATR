@@ -1,0 +1,290 @@
+/* ============================================================
+   MENU DE NAVEGAÇÃO - menu.css
+   Estrutura organizada, padronizada e legível
+   ============================================================*/
+
+/* ------------------------------
+   Container principal do menu
+------------------------------ */
+.menu-container {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    padding: 12px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-bottom: 3px solid #1abc9c;
+}
+
+/* ------------------------------
+   Lista do menu
+------------------------------ */
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    display: inline-block;
+}
+
+/* ------------------------------
+   Links do menu
+------------------------------ */
+.menu-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.menu-link:hover {
+    background: rgba(52,73,94,0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-color: #1abc9c;
+}
+
+/* Efeito de brilho */
+.menu-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+}
+
+.menu-link:hover::after {
+    left: 100%;
+}
+
+/* ------------------------------
+   Link ativo
+------------------------------ */
+.menu-link.active {
+    background: #1abc9c;
+    color: #fff;
+    font-weight: 600;
+    border-color: #16a085;
+    box-shadow: 0 4px 8px rgba(26,188,156,0.3);
+
+    animation: pulse 2s infinite;
+}
+
+.menu-link.active::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transform: translateX(-50%);
+}
+
+/* ------------------------------
+   Títulos de módulos
+------------------------------ */
+.module-title {
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #bdc3c7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-right: 2px solid #34495e;
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.module-separator {
+    opacity: 0.5;
+    font-weight: bold;
+    color: #7f8c8d;
+    padding: 10px 5px;
+}
+
+/* ------------------------------
+   Logout
+------------------------------ */
+.logout-container {
+    margin-left: auto;
+}
+
+.logout-link {
+    background: #e74c3c;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logout-link:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(231,76,60,0.3);
+    border-color: #c0392b;
+}
+
+.logout-icon {
+    font-size: 16px;
+}
+
+.logout-link span {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* ------------------------------
+   Indicadores / Badges
+------------------------------ */
+.new-indicator {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background: #e74c3c;
+    border-radius: 50%;
+    border: 2px solid #2c3e50;
+}
+
+.menu-badge {
+    background: #e74c3c;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Oculta menu caso vazio */
+.menu-container:empty {
+    display: none;
+}
+
+/* ============================================================
+   ANIMAÇÕES
+============================================================ */
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+============================================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .menu-list {
+        gap: 8px;
+        padding: 0 15px;
+    }
+
+    .menu-link {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .module-title {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+}
+
+/* Smartphones grandes */
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 10px 0;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
+
+    .menu-link {
+        padding: 12px 15px;
+        text-align: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    .module-title {
+        text-align: center;
+        border-right: none;
+        border-bottom: 2px solid #34495e;
+        margin: 0 0 5px 0;
+        padding: 12px;
+    }
+
+    .module-separator {
+        display: none;
+    }
+
+    .logout-container {
+        margin: 10px 0 0 0;
+        order: 99;
+    }
+
+    .logout-link {
+        background: #c0392b;
+        justify-content: center;
+    }
+}
+
+/* Smartphones pequenos */
+@media (max-width: 480px) {
+    .menu-link {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .logout-link span {
+        font-size: 11px;
+    }
+}
+
+/* ============================================================
+   MODO ESCURO
+============================================================ */
+@media (prefers-color-scheme: dark) {
+    .menu-container {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border-bottom-color: #0d9488;
+    }
+
+    .menu-link.active {
+        background: #0d9488;
+    }
+}
