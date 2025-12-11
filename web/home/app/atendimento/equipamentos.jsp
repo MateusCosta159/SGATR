@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/app/css/equipamentos.css">
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/css/equipamentos.css">
 
         <title>Equipamentos</title>
     </head>
@@ -25,7 +25,7 @@
         
         <h1>Equipamentos</h1>
         
-        <a href="<%= request.getContextPath()  %>/home/app/atendimento/equipamentos_form.jsp?action=create">Novo Equipamento</a><br/><br/>
+      
         
         <table border="1" cellpadding="6" cellspacing="0">
             
@@ -81,6 +81,6 @@
             <% } %>
             
         </table>
-        
+          <a href="<%= request.getContextPath()  %>/home/app/atendimento/equipamentos_form.jsp?action=create">Novo Equipamento</a><br/><br/>
     </body>
 </html>

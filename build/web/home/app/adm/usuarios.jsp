@@ -7,6 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Usuários</title>
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/home/css/usuarios.css">
+
 </head>
 <body>
 

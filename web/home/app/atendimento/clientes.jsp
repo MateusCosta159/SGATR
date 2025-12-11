@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/app/css/clientes.css">
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/css/clientes.css">
 
         <title>Clientes</title>
     </head>
@@ -25,7 +25,7 @@
         
         <h1>Clientes</h1>
         
-        <a href="<%= request.getContextPath()  %>/home/app/atendimento/clientes_form.jsp?action=create">Novo Cliente</a><br/><br/>
+       
         
         <table border="1" cellpadding="6" cellspacing="0">
             
@@ -75,6 +75,6 @@
             <% } %>
             
         </table>
-        
+         <a href="<%= request.getContextPath()  %>/home/app/atendimento/clientes_form.jsp?action=create">Novo Cliente</a><br/><br/>
     </body>
 </html>

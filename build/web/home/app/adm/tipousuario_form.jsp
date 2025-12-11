@@ -6,13 +6,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Tipo de Usuário</title>
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/home/css/tipousuario.css">
+
 </head>
 <body>
 
     <%@ include file="/home/app/modulos.jsp" %>
 
 <%
-    // Objeto do tipo usuário
+    
     TipoUsuario tp = null;
 
     String action = request.getParameter("action");
@@ -53,15 +55,16 @@
     <input type="checkbox" id="modulo_adm" name="modulo_adm" value="S" <%= modAdmin %>>
     <label for="modulo_adm">Administrativo</label>
     
-    
     <!-- ATENDIMENTO -->
     <input type="checkbox" id="modulo_atendimento" name="modulo_atendimento" value="S" <%= modAtend %>>
     <label for="modulo_atendimento">Atendimento</label>
 
-    <!-- TÉCNICO -->
+   
+
+     <!-- TÉCNICO -->
     <input type="checkbox" id="modulo_tecnico" name="modulo_tecnico" value="S" <%= modTec %>>
     <label for="modulo_tecnico">Técnico</label>
-
+    
 
     <br><br>
 

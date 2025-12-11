@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Login</title>
 
-    <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/app/css/login.css">
+    <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/css/login.css">
 </head>
 <body>
 

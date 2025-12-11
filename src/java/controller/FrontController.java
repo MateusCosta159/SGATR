@@ -75,7 +75,7 @@ public class FrontController extends HttpServlet {
         }
     }
 
-    // ========== MÉTODOS GET ==========
+
 
     private void doGetClientes(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String action = request.getParameter("action");
@@ -107,7 +107,7 @@ public class FrontController extends HttpServlet {
             t.setId(id);
             t.delete();
         }
-        response.sendRedirect(request.getContextPath() + "/home/app/tecnico/tecnicos.jsp");
+        response.sendRedirect(request.getContextPath() + "/home/app/adm/tecnicos.jsp");
     }
 
     private void doGetOS(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -118,7 +118,7 @@ public class FrontController extends HttpServlet {
             os.setId(id);
             os.delete();
         }
-        response.sendRedirect(request.getContextPath() + "/home/app/os/os.jsp");
+        response.sendRedirect(request.getContextPath() + "/home/app/tecnico/os.jsp");
     }
 
     private void doGetUsuarios(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -143,12 +143,12 @@ public class FrontController extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/home/app/adm/tipousuario.jsp");
     }
 
-    // ========== MÉTODOS POST ==========
+   
 
     private void doPostClientes(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String action = request.getParameter("action");
 
-        // CORREÇÃO: Tratar ID que pode ser vazio em criação
+        
         String idStr = request.getParameter("id");
         int id = 0;
         if (idStr != null && !idStr.trim().isEmpty()) {
@@ -163,12 +163,12 @@ public class FrontController extends HttpServlet {
 
         Cliente c = new Cliente();
         
-        // CORREÇÃO: Só setar ID se for maior que 0
+     
         if (id > 0) {
             c.setId(id);
         }
 
-        // CORREÇÃO: Seguir a mesma lógica do exemplo - verificar se é update
+       
         if ("update".equals(action) && id > 0) {
             c.load();
         }
@@ -187,7 +187,7 @@ public class FrontController extends HttpServlet {
     private void doPostEquipamentos(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String action = request.getParameter("action");
 
-        // CORREÇÃO: Tratar ID que pode ser vazio
+    
         String idStr = request.getParameter("id");
         int id = 0;
         if (idStr != null && !idStr.trim().isEmpty()) {
@@ -254,7 +254,7 @@ public class FrontController extends HttpServlet {
 
         t.save();
 
-        response.sendRedirect(request.getContextPath() + "/home/app/tecnico/tecnicos.jsp");
+        response.sendRedirect(request.getContextPath() + "/home/app/adm/tecnicos.jsp");
     }
 
     private void doPostOS(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -265,20 +265,20 @@ public class FrontController extends HttpServlet {
     
     int equipamentoId = Integer.parseInt(request.getParameter("equipamentoId"));
     
-    // IMPORTANTE: Copiar a mesma lógica do Usuário para tecnicoId
+   
     String tecnicoIdStr = request.getParameter("tecnicoId");
-    int tecnicoId = 0; // Default 0 como no Usuário (convenioId = 0)
+    int tecnicoId = 0;
     if (tecnicoIdStr != null && !tecnicoIdStr.trim().isEmpty()) {
         tecnicoId = Integer.parseInt(tecnicoIdStr);
     }
     
-    // *** COPIA EXATA DA LÓGICA DO USUÁRIO ***
+    
     String dataAbertura = request.getParameter("dataAbertura");
     
     String status = request.getParameter("status");
     String observacoes = request.getParameter("observacoes");
 
-    // Copiar a mesma lógica para valores monetários
+ 
     String valorOrcStr = request.getParameter("valorOrcamento");
     Double valorOrc = null;
     if (valorOrcStr != null && !valorOrcStr.trim().isEmpty()) {
@@ -295,7 +295,7 @@ public class FrontController extends HttpServlet {
 
     os.setId(id);
 
-    // MESMA VERIFICAÇÃO DO USUÁRIO
+   
     if ("update".equals(action)) {
         os.load();
     }
@@ -303,7 +303,7 @@ public class FrontController extends HttpServlet {
     os.setEquipamentoId(equipamentoId);
     os.setTecnicoId(tecnicoId);
     
-    // *** TRATAMENTO IDÊNTICO AO DO USUÁRIO PARA DATA ***
+    
     if (dataAbertura == null || dataAbertura.trim().isEmpty()) {
         os.setDataAbertura(null);
     } else {
@@ -313,13 +313,13 @@ public class FrontController extends HttpServlet {
     os.setStatus(status);
     os.setObservacoes(observacoes);
     
-    // Para valores monetários, se null, o setter deve lidar com isso
+  
     os.setValorOrcamento(valorOrc);
     os.setValorFinal(valorFinal);
 
     os.save();
     
-    response.sendRedirect(request.getContextPath() + "/home/app/os/os.jsp");
+    response.sendRedirect(request.getContextPath() + "/home/app/tecnico/os.jsp");
 }
     private void doPostUsuarios(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String action = request.getParameter("action");
@@ -357,7 +357,7 @@ public class FrontController extends HttpServlet {
     private void doPostTipoUsuario(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String action = request.getParameter("action");
 
-        // CORREÇÃO: Tratar ID que pode ser vazio
+      
         String idStr = request.getParameter("id");
         int id = 0;
         if (idStr != null && !idStr.trim().isEmpty()) {

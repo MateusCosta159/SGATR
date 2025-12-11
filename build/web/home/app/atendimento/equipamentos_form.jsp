@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/app/css/equipamentos.css">
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/home/css/equipamentos.css">
 
         <title>Equipamento</title>
     </head>
@@ -40,7 +40,7 @@
             // Carrega lista de clientes
             clientesList = (ArrayList<Cliente>) request.getAttribute("clientesList");
             if (clientesList == null || clientesList.isEmpty()) {
-                // Busca diretamente do modelo se não veio na requisição
+                
                 clientesList = new Cliente().getAllTableEntities();
             }
         %>
@@ -51,8 +51,8 @@
 
             <label for="id">Id:</label>
             <input type="text" id="id" name="id" pattern="\d+" title="apenas dígitos" 
-                   value="<%= entity.getId() %>" 
-                   <%= (entity.getId() != 0) ? "readonly" : "" %> required><br/><br/>
+                   value="<%= (entity.getId() == 0) ? "" : entity.getId()%>" 
+                   <%= (entity.getId() != 0) ? "readonly" : ""%> required><br/><br/>
 
             <label for="clienteId">Cliente:</label>
             <select id="clienteId" name="clienteId" required>

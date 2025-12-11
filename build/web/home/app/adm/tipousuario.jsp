@@ -7,10 +7,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Tipo de Usuário</title>
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/home/css/tipousuario.css">
 
-    <style>
-        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 6px; }
-    </style>
+
+    
 </head>
 <body>
 
@@ -45,14 +45,14 @@
             <td><%= tp.getModuloTecnico().equals("S") ? "Sim" : "Não" %></td>
            
 
-            <!-- LINK ALTERAR -->
+      
             <td>
                 <a href="<%= request.getContextPath() %>/home/app/adm/tipousuario_form.jsp?action=update&id=<%= tp.getId() %>">
                     Alterar
                 </a>
             </td>
 
-            <!-- LINK EXCLUIR -->
+         
             <td>
                 <a href="<%= request.getContextPath() %>/home?task=tipousuario&action=delete&id=<%= tp.getId() %>" 
                    onclick="return confirm('Deseja realmente excluir o Tipo de Usuário <%= tp.getNome() %>?');">
