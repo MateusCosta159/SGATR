@@ -46,6 +46,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="number"],
+input[type="password"],   /* <-- ADICIONE ESTA LINHA */
 select,
 textarea {
     width: 100%;
@@ -57,6 +58,7 @@ textarea {
     background: #fff;
     transition: border-color 0.2s;
 }
+
 
 textarea {
     resize: vertical;
@@ -137,7 +139,7 @@ table a:hover {
     text-decoration: underline;
 }
 
-/* Mensagem Nenhum Registro */
+
 td[colspan] {
     text-align: center;
     padding: 20px 0;

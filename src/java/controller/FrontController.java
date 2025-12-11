@@ -44,6 +44,7 @@ public class FrontController extends HttpServlet {
 
         } catch (Exception ex) {
             ExceptionLogTrack.getInstance().addLog(ex);
+            throw new ServletException(ex);  //  👈 AGORA O ERROR-PAGE FUNCIONA!
         }
     }
 
@@ -72,10 +73,11 @@ public class FrontController extends HttpServlet {
 
         } catch (Exception ex) {
             ExceptionLogTrack.getInstance().addLog(ex);
+            throw new ServletException(ex); 
         }
     }
 
-
+  
 
     private void doGetClientes(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String action = request.getParameter("action");
@@ -143,17 +145,11 @@ public class FrontController extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/home/app/adm/tipousuario.jsp");
     }
 
-   
-
     private void doPostClientes(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String action = request.getParameter("action");
-
-        
         String idStr = request.getParameter("id");
         int id = 0;
-        if (idStr != null && !idStr.trim().isEmpty()) {
-            id = Integer.parseInt(idStr);
-        }
+        if (idStr != null && !idStr.trim().isEmpty()) id = Integer.parseInt(idStr);
 
         String nome = request.getParameter("nome");
         String telefone = request.getParameter("telefone");
@@ -162,16 +158,9 @@ public class FrontController extends HttpServlet {
         String endereco = request.getParameter("endereco");
 
         Cliente c = new Cliente();
-        
-     
-        if (id > 0) {
-            c.setId(id);
-        }
 
-       
-        if ("update".equals(action) && id > 0) {
-            c.load();
-        }
+        if (id > 0) c.setId(id);
+        if ("update".equals(action) && id > 0) c.load();
 
         c.setNome(nome);
         c.setTelefone(telefone);
@@ -186,31 +175,20 @@ public class FrontController extends HttpServlet {
 
     private void doPostEquipamentos(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String action = request.getParameter("action");
-
-    
         String idStr = request.getParameter("id");
         int id = 0;
-        if (idStr != null && !idStr.trim().isEmpty()) {
-            id = Integer.parseInt(idStr);
-        }
+        if (idStr != null && !idStr.trim().isEmpty()) id = Integer.parseInt(idStr);
 
         int clienteId = Integer.parseInt(request.getParameter("clienteId"));
         String tipo = request.getParameter("tipo");
         String marca = request.getParameter("marca");
         String modelo = request.getParameter("modelo");
-        // CORREÇÃO: Nome do parâmetro estava errado
         String defeito = request.getParameter("defeitoRelatado");
 
         Equipamento e = new Equipamento();
-        
-        if (id > 0) {
-            e.setId(id);
-        }
 
-        // CORREÇÃO: Seguir a mesma lógica do exemplo
-        if ("update".equals(action) && id > 0) {
-            e.load();
-        }
+        if (id > 0) e.setId(id);
+        if ("update".equals(action) && id > 0) e.load();
 
         e.setClienteId(clienteId);
         e.setTipo(tipo);
@@ -226,27 +204,18 @@ public class FrontController extends HttpServlet {
     private void doPostTecnicos(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String action = request.getParameter("action");
 
-        // CORREÇÃO: Tratar ID que pode ser vazio
         String idStr = request.getParameter("id");
         int id = 0;
-        if (idStr != null && !idStr.trim().isEmpty()) {
-            id = Integer.parseInt(idStr);
-        }
+        if (idStr != null && !idStr.trim().isEmpty()) id = Integer.parseInt(idStr);
 
         String nome = request.getParameter("nome");
         String especialidade = request.getParameter("especialidade");
-        // CORREÇÃO: Adicionar campo telefone que estava faltando
         String telefone = request.getParameter("telefone");
 
         Tecnico t = new Tecnico();
-        
-        if (id > 0) {
-            t.setId(id);
-        }
 
-        if ("update".equals(action) && id > 0) {
-            t.load();
-        }
+        if (id > 0) t.setId(id);
+        if ("update".equals(action) && id > 0) t.load();
 
         t.setNome(nome);
         t.setEspecialidade(especialidade);
@@ -258,92 +227,69 @@ public class FrontController extends HttpServlet {
     }
 
     private void doPostOS(HttpServletRequest request, HttpServletResponse response) throws Exception {
-    
-    String action = request.getParameter("action");
 
-    int id = Integer.parseInt(request.getParameter("id"));
-    
-    int equipamentoId = Integer.parseInt(request.getParameter("equipamentoId"));
-    
-   
-    String tecnicoIdStr = request.getParameter("tecnicoId");
-    int tecnicoId = 0;
-    if (tecnicoIdStr != null && !tecnicoIdStr.trim().isEmpty()) {
-        tecnicoId = Integer.parseInt(tecnicoIdStr);
-    }
-    
-    
-    String dataAbertura = request.getParameter("dataAbertura");
-    
-    String status = request.getParameter("status");
-    String observacoes = request.getParameter("observacoes");
-
- 
-    String valorOrcStr = request.getParameter("valorOrcamento");
-    Double valorOrc = null;
-    if (valorOrcStr != null && !valorOrcStr.trim().isEmpty()) {
-        valorOrc = Double.valueOf(valorOrcStr);
-    }
-
-    String valorFinalStr = request.getParameter("valorFinal");
-    Double valorFinal = null;
-    if (valorFinalStr != null && !valorFinalStr.trim().isEmpty()) {
-        valorFinal = Double.valueOf(valorFinalStr);
-    }
-
-    OrdemServico os = new OrdemServico();
-
-    os.setId(id);
-
-   
-    if ("update".equals(action)) {
-        os.load();
-    }
-
-    os.setEquipamentoId(equipamentoId);
-    os.setTecnicoId(tecnicoId);
-    
-    
-    if (dataAbertura == null || dataAbertura.trim().isEmpty()) {
-        os.setDataAbertura(null);
-    } else {
-        os.setDataAbertura(dataAbertura);
-    }
-    
-    os.setStatus(status);
-    os.setObservacoes(observacoes);
-    
-  
-    os.setValorOrcamento(valorOrc);
-    os.setValorFinal(valorFinal);
-
-    os.save();
-    
-    response.sendRedirect(request.getContextPath() + "/home/app/tecnico/os.jsp");
-}
-    private void doPostUsuarios(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String action = request.getParameter("action");
 
-        // CORREÇÃO: Tratar ID que pode ser vazio
+        int id = Integer.parseInt(request.getParameter("id"));
+        int equipamentoId = Integer.parseInt(request.getParameter("equipamentoId"));
+
+        String tecnicoIdStr = request.getParameter("tecnicoId");
+        int tecnicoId = 0;
+        if (tecnicoIdStr != null && !tecnicoIdStr.trim().isEmpty())
+            tecnicoId = Integer.parseInt(tecnicoIdStr);
+
+        String dataAbertura = request.getParameter("dataAbertura");
+
+        String status = request.getParameter("status");
+        String observacoes = request.getParameter("observacoes");
+
+        String valorOrcStr = request.getParameter("valorOrcamento");
+        Double valorOrc = (valorOrcStr != null && !valorOrcStr.trim().isEmpty())
+                ? Double.valueOf(valorOrcStr)
+                : null;
+
+        String valorFinalStr = request.getParameter("valorFinal");
+        Double valorFinal = (valorFinalStr != null && !valorFinalStr.trim().isEmpty())
+                ? Double.valueOf(valorFinalStr)
+                : null;
+
+        OrdemServico os = new OrdemServico();
+
+        os.setId(id);
+
+        if ("update".equals(action)) os.load();
+
+        os.setEquipamentoId(equipamentoId);
+        os.setTecnicoId(tecnicoId);
+        os.setDataAbertura(
+                (dataAbertura == null || dataAbertura.trim().isEmpty()) ? null : dataAbertura
+        );
+        os.setStatus(status);
+        os.setObservacoes(observacoes);
+        os.setValorOrcamento(valorOrc);
+        os.setValorFinal(valorFinal);
+
+        os.save();
+
+        response.sendRedirect(request.getContextPath() + "/home/app/tecnico/os.jsp");
+    }
+
+    private void doPostUsuarios(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        String action = request.getParameter("action");
+
         String idStr = request.getParameter("id");
         int id = 0;
-        if (idStr != null && !idStr.trim().isEmpty()) {
-            id = Integer.parseInt(idStr);
-        }
+        if (idStr != null && !idStr.trim().isEmpty()) id = Integer.parseInt(idStr);
 
         String nome = request.getParameter("nome");
         String senha = request.getParameter("senha");
         int tipoUsuarioId = Integer.parseInt(request.getParameter("tipo_usuario_id"));
 
         Usuario u = new Usuario();
-        
-        if (id > 0) {
-            u.setId(id);
-        }
 
-        if ("update".equals(action) && id > 0) {
-            u.load();
-        }
+        if (id > 0) u.setId(id);
+        if ("update".equals(action) && id > 0) u.load();
 
         u.setNome(nome);
         u.setSenha(senha);
@@ -355,14 +301,12 @@ public class FrontController extends HttpServlet {
     }
 
     private void doPostTipoUsuario(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
         String action = request.getParameter("action");
 
-      
         String idStr = request.getParameter("id");
         int id = 0;
-        if (idStr != null && !idStr.trim().isEmpty()) {
-            id = Integer.parseInt(idStr);
-        }
+        if (idStr != null && !idStr.trim().isEmpty()) id = Integer.parseInt(idStr);
 
         String nome = request.getParameter("nome");
 
@@ -376,14 +320,9 @@ public class FrontController extends HttpServlet {
         if (moduloAtendimento == null) moduloAtendimento = "N";
 
         TipoUsuario tp = new TipoUsuario();
-        
-        if (id > 0) {
-            tp.setId(id);
-        }
 
-        if ("update".equals(action) && id > 0) {
-            tp.load();
-        }
+        if (id > 0) tp.setId(id);
+        if ("update".equals(action) && id > 0) tp.load();
 
         tp.setNome(nome);
         tp.setModuloAdmin(moduloAdm);
@@ -396,6 +335,7 @@ public class FrontController extends HttpServlet {
     }
 
     private void doPostLogin(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
         int id = Integer.parseInt(request.getParameter("id"));
         String senha = request.getParameter("senha");
 

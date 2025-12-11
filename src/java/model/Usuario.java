@@ -50,11 +50,17 @@ public class Usuario extends DataAccessObject {
         if (!senha.equals(this.senha)) {
 
             String senhaSal = id + senha + (id / 2);
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            MessageDigest md = MessageDigest.getInstance("SHA-512");
             String hash = new BigInteger(1, md.digest(senhaSal.getBytes("UTF-8"))).toString(16);
 
+            while(hash.length() < 128){
+                hash = "0" + hash;
+            }
+            
             this.senha = hash;
             addChange("senha", this.senha);
+            
+            
         }
     }
 
